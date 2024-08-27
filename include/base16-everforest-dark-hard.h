@@ -1,7 +1,7 @@
 /**
  * Base16 Everforest Dark Hard 
  * 
- * @author Oskar Liew (https://github.com/OskarLiew)
+ * @author Sainnhe Park (https://github.com/sainnhe)
  * 
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
@@ -35,7 +35,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Everforest Dark Hard scheme.
  * 
- * By: Oskar Liew (https://github.com/OskarLiew)
+ * By: Sainnhe Park (https://github.com/sainnhe)
  */
 extern const base16_scheme base16_everforest_dark_hard;
 
@@ -54,16 +54,16 @@ const base16_scheme base16_everforest_dark_hard = {
         { .r = 133, .g = 146, .b = 137 },
         { .r = 157, .g = 169, .b = 160 },
         { .r = 211, .g = 198, .b = 170 },
-        { .r = 228, .g = 225, .b = 205 },
-        { .r = 253, .g = 246, .b = 227 },
+        { .r = 237, .g = 234, .b = 218 },
+        { .r = 255, .g = 251, .b = 239 },
+        { .r = 230, .g = 126, .b = 128 },
+        { .r = 230, .g = 152, .b = 117 },
+        { .r = 219, .g = 188, .b = 127 },
+        { .r = 167, .g = 192, .b = 128 },
+        { .r = 131, .g = 192, .b = 146 },
         { .r = 127, .g = 187, .b = 179 },
         { .r = 214, .g = 153, .b = 182 },
-        { .r = 219, .g = 188, .b = 127 },
-        { .r = 131, .g = 192, .b = 146 },
-        { .r = 230, .g = 152, .b = 117 },
-        { .r = 167, .g = 192, .b = 128 },
-        { .r = 230, .g = 126, .b = 128 },
-        { .r = 76, .g = 55, .b = 67 }
+        { .r = 157, .g = 169, .b = 160 }
     }
 };
 

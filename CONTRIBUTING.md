@@ -9,13 +9,18 @@
 ### Usage for template editing
 
 1. Install [tinted-builder-rust]
-1. `tinted-builder-rust build path/to/base16-xfce4-terminal`
-
-### Usage for adding or editing a colorscheme
-
-1. Clone base16-h
-1. Install [tinted-builder-rust]
-1. Execute `tinted-builder-rust build path/to/base16-xfce4-terminal`
+1. Syncronize the color schemes
+    ```
+    tinted-builder-rust sync
+    ```
+1. Clone [base16-h](https://github.com/robloach/base16-h)
+    ```sh
+    git clone https://github.com/RobLoach/base16-h.git
+    ```
+1. Run `tinted-builder-rust` on the directory
+    ```sh
+    tinted-builder-rust build base16-h
+    ```
 
 If you have more questions about [tinted-builder-rust], have a look at
 the information on the GitHub page.

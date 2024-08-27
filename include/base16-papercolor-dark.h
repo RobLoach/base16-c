@@ -1,7 +1,7 @@
 /**
  * Base16 PaperColor Dark 
  * 
- * @author Jon Leopard (http://github.com/jonleopard) based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
+ * @author Jon Leopard (http://github.com/jonleopard), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
  * 
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
@@ -35,7 +35,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 PaperColor Dark scheme.
  * 
- * By: Jon Leopard (http://github.com/jonleopard) based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
+ * By: Jon Leopard (http://github.com/jonleopard), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
  */
 extern const base16_scheme base16_papercolor_dark;
 

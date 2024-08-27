@@ -1,7 +1,7 @@
 /**
  * Base16 Dracula 
  * 
- * @author Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+ * @author Jamy Golden (http://github.com/JamyGolden), based on Dracula Theme (http://github.com/dracula)
  * 
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
@@ -35,7 +35,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Dracula scheme.
  * 
- * By: Mike Barkmin (http://github.com/mikebarkmin) based on Dracula Theme (http://github.com/dracula)
+ * By: Jamy Golden (http://github.com/JamyGolden), based on Dracula Theme (http://github.com/dracula)
  */
 extern const base16_scheme base16_dracula;
 
@@ -48,22 +48,22 @@ extern const base16_scheme base16_dracula;
 const base16_scheme base16_dracula = {
     .name = "Dracula",
     .base = {
-        { .r = 40, .g = 41, .b = 54 },
-        { .r = 58, .g = 60, .b = 78 },
-        { .r = 77, .g = 79, .b = 104 },
-        { .r = 98, .g = 100, .b = 131 },
-        { .r = 98, .g = 214, .b = 232 },
-        { .r = 233, .g = 233, .b = 244 },
-        { .r = 241, .g = 242, .b = 248 },
-        { .r = 247, .g = 247, .b = 251 },
-        { .r = 234, .g = 81, .b = 178 },
-        { .r = 180, .g = 91, .b = 207 },
-        { .r = 0, .g = 247, .b = 105 },
-        { .r = 235, .g = 255, .b = 135 },
-        { .r = 161, .g = 239, .b = 228 },
-        { .r = 98, .g = 214, .b = 232 },
-        { .r = 180, .g = 91, .b = 207 },
-        { .r = 0, .g = 247, .b = 105 }
+        { .r = 40, .g = 42, .b = 54 },
+        { .r = 54, .g = 52, .b = 71 },
+        { .r = 68, .g = 71, .b = 90 },
+        { .r = 98, .g = 114, .b = 164 },
+        { .r = 158, .g = 168, .b = 199 },
+        { .r = 248, .g = 248, .b = 242 },
+        { .r = 240, .g = 241, .b = 244 },
+        { .r = 255, .g = 255, .b = 255 },
+        { .r = 255, .g = 85, .b = 85 },
+        { .r = 255, .g = 184, .b = 108 },
+        { .r = 241, .g = 250, .b = 140 },
+        { .r = 80, .g = 250, .b = 123 },
+        { .r = 139, .g = 233, .b = 253 },
+        { .r = 128, .g = 191, .b = 255 },
+        { .r = 255, .g = 121, .b = 198 },
+        { .r = 189, .g = 147, .b = 249 }
     }
 };
 
