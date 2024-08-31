@@ -1,8 +1,8 @@
 /**
  * Base16 Windows NT 
- * 
+ *
  * @author Fergus Collins (https://github.com/C-Fergus)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Windows NT scheme.
- * 
+ *
  * By: Fergus Collins (https://github.com/C-Fergus)
  */
 extern const base16_scheme base16_windows_nt;

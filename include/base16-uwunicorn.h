@@ -1,8 +1,8 @@
 /**
  * Base16 UwUnicorn 
- * 
+ *
  * @author Fernando Marques (https://github.com/RakkiUwU) and Gabriel Fontes (https://github.com/Misterio77)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 UwUnicorn scheme.
- * 
+ *
  * By: Fernando Marques (https://github.com/RakkiUwU) and Gabriel Fontes (https://github.com/Misterio77)
  */
 extern const base16_scheme base16_uwunicorn;

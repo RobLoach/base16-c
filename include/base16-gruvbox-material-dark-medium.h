@@ -1,8 +1,8 @@
 /**
  * Base16 Gruvbox Material Dark, Medium 
- * 
+ *
  * @author Mayush Kumar (https://github.com/MayushKumar), sainnhe (https://github.com/sainnhe/gruvbox-material-vscode)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Gruvbox Material Dark, Medium scheme.
- * 
+ *
  * By: Mayush Kumar (https://github.com/MayushKumar), sainnhe (https://github.com/sainnhe/gruvbox-material-vscode)
  */
 extern const base16_scheme base16_gruvbox_material_dark_medium;

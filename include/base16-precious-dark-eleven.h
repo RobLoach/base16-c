@@ -1,8 +1,8 @@
 /**
  * Base16 Precious Dark Eleven 
- * 
+ *
  * @author 4lex4 &lt;4lex49@zoho.com&gt;
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Precious Dark Eleven scheme.
- * 
+ *
  * By: 4lex4 &lt;4lex49@zoho.com&gt;
  */
 extern const base16_scheme base16_precious_dark_eleven;

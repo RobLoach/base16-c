@@ -1,8 +1,8 @@
 /**
  * Base16 Dracula 
- * 
+ *
  * @author Jamy Golden (http://github.com/JamyGolden), based on Dracula Theme (http://github.com/dracula)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Dracula scheme.
- * 
+ *
  * By: Jamy Golden (http://github.com/JamyGolden), based on Dracula Theme (http://github.com/dracula)
  */
 extern const base16_scheme base16_dracula;

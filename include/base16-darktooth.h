@@ -1,8 +1,8 @@
 /**
  * Base16 Darktooth 
- * 
+ *
  * @author Jason Milkins (https://github.com/jasonm23)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Darktooth scheme.
- * 
+ *
  * By: Jason Milkins (https://github.com/jasonm23)
  */
 extern const base16_scheme base16_darktooth;

@@ -1,8 +1,8 @@
 /**
  * Base16 Brogrammer 
- * 
+ *
  * @author Vik Ramanujam (http://github.com/piggyslasher)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Brogrammer scheme.
- * 
+ *
  * By: Vik Ramanujam (http://github.com/piggyslasher)
  */
 extern const base16_scheme base16_brogrammer;

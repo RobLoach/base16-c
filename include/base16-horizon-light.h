@@ -1,8 +1,8 @@
 /**
  * Base16 Horizon Light 
- * 
+ *
  * @author Michaël Ball (http://github.com/michael-ball/)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Horizon Light scheme.
- * 
+ *
  * By: Michaël Ball (http://github.com/michael-ball/)
  */
 extern const base16_scheme base16_horizon_light;

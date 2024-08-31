@@ -1,8 +1,8 @@
 /**
  * Base16 Tomorrow Night 
- * 
+ *
  * @author Chris Kempson (http://chriskempson.com)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Tomorrow Night scheme.
- * 
+ *
  * By: Chris Kempson (http://chriskempson.com)
  */
 extern const base16_scheme base16_tomorrow_night;

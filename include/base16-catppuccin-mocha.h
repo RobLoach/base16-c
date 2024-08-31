@@ -1,8 +1,8 @@
 /**
  * Base16 Catppuccin Mocha 
- * 
+ *
  * @author https://github.com/catppuccin/catppuccin
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Catppuccin Mocha scheme.
- * 
+ *
  * By: https://github.com/catppuccin/catppuccin
  */
 extern const base16_scheme base16_catppuccin_mocha;

@@ -1,8 +1,8 @@
 /**
  * Base16 DanQing Light 
- * 
+ *
  * @author Wenhan Zhu (Cosmos) (zhuwenhan950913@gmail.com)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 DanQing Light scheme.
- * 
+ *
  * By: Wenhan Zhu (Cosmos) (zhuwenhan950913@gmail.com)
  */
 extern const base16_scheme base16_danqing_light;

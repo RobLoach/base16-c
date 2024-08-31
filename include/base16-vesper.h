@@ -1,8 +1,8 @@
 /**
  * Base16 Vesper 
- * 
+ *
  * @author FormalSnake (https://github.com/formalsnake)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Vesper scheme.
- * 
+ *
  * By: FormalSnake (https://github.com/formalsnake)
  */
 extern const base16_scheme base16_vesper;

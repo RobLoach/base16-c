@@ -1,8 +1,8 @@
 /**
  * Base16 Tokyo City Terminal Light 
- * 
+ *
  * @author Michaël Ball
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Tokyo City Terminal Light scheme.
- * 
+ *
  * By: Michaël Ball
  */
 extern const base16_scheme base16_tokyo_city_terminal_light;

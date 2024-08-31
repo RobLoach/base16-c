@@ -1,8 +1,8 @@
 /**
  * Base16 Tango 
- * 
+ *
  * @author @Schnouki, based on the Tango Desktop Project
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Tango scheme.
- * 
+ *
  * By: @Schnouki, based on the Tango Desktop Project
  */
 extern const base16_scheme base16_tango;

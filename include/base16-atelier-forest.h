@@ -1,8 +1,8 @@
 /**
  * Base16 Atelier Forest 
- * 
+ *
  * @author Bram de Haan (http://atelierbramdehaan.nl)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Atelier Forest scheme.
- * 
+ *
  * By: Bram de Haan (http://atelierbramdehaan.nl)
  */
 extern const base16_scheme base16_atelier_forest;

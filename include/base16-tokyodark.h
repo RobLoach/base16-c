@@ -1,8 +1,8 @@
 /**
  * Base16 Tokyodark 
- * 
- * @author Tiagovla (https://github.com/tiagovla/)
- * 
+ *
+ * @author Jamy Golden (https://github.com/JamyGolden), Based on Tokyodark.nvim (https://github.com/tiagovla/tokyodark.nvim)
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,8 +34,8 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Tokyodark scheme.
- * 
- * By: Tiagovla (https://github.com/tiagovla/)
+ *
+ * By: Jamy Golden (https://github.com/JamyGolden), Based on Tokyodark.nvim (https://github.com/tiagovla/tokyodark.nvim)
  */
 extern const base16_scheme base16_tokyodark;
 
@@ -49,20 +49,20 @@ const base16_scheme base16_tokyodark = {
     .name = "Tokyodark",
     .base = {
         { .r = 17, .g = 18, .b = 29 },
-        { .r = 21, .g = 22, .b = 33 },
-        { .r = 67, .g = 68, .b = 79 },
-        { .r = 57, .g = 58, .b = 69 },
-        { .r = 27, .g = 28, .b = 39 },
+        { .r = 33, .g = 34, .b = 52 },
+        { .r = 33, .g = 34, .b = 52 },
+        { .r = 53, .g = 57, .b = 69 },
+        { .r = 74, .g = 80, .b = 87 },
+        { .r = 160, .g = 168, .b = 205 },
         { .r = 171, .g = 178, .b = 191 },
-        { .r = 85, .g = 86, .b = 97 },
-        { .r = 44, .g = 45, .b = 56 },
-        { .r = 164, .g = 133, .b = 221 },
-        { .r = 164, .g = 133, .b = 221 },
-        { .r = 113, .g = 153, .b = 238 },
-        { .r = 215, .g = 166, .b = 95 },
-        { .r = 164, .g = 133, .b = 221 },
-        { .r = 149, .g = 197, .b = 97 },
+        { .r = 188, .g = 194, .b = 220 },
         { .r = 238, .g = 109, .b = 133 },
+        { .r = 246, .g = 149, .b = 91 },
+        { .r = 215, .g = 166, .b = 95 },
+        { .r = 149, .g = 197, .b = 97 },
+        { .r = 159, .g = 187, .b = 243 },
+        { .r = 113, .g = 153, .b = 238 },
+        { .r = 164, .g = 133, .b = 221 },
         { .r = 119, .g = 52, .b = 64 }
     }
 };

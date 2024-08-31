@@ -1,8 +1,8 @@
 /**
  * Base16 Porple 
- * 
+ *
  * @author Niek den Breeje (https://github.com/AuditeMarlow)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Porple scheme.
- * 
+ *
  * By: Niek den Breeje (https://github.com/AuditeMarlow)
  */
 extern const base16_scheme base16_porple;

@@ -1,8 +1,8 @@
 /**
  * Base16 tender 
- * 
+ *
  * @author Jacobo Tabernero (https://github/com/jacoborus/tender.vim)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 tender scheme.
- * 
+ *
  * By: Jacobo Tabernero (https://github/com/jacoborus/tender.vim)
  */
 extern const base16_scheme base16_tender;

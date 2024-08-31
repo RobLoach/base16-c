@@ -1,8 +1,8 @@
 /**
  * Base16 Primer Dark Dimmed 
- * 
+ *
  * @author Jimmy Lin
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Primer Dark Dimmed scheme.
- * 
+ *
  * By: Jimmy Lin
  */
 extern const base16_scheme base16_primer_dark_dimmed;

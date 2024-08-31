@@ -1,8 +1,8 @@
 /**
  * Base16 Summerfruit Dark 
- * 
+ *
  * @author Christopher Corley (http://christop.club/)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Summerfruit Dark scheme.
- * 
+ *
  * By: Christopher Corley (http://christop.club/)
  */
 extern const base16_scheme base16_summerfruit_dark;

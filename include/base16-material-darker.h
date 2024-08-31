@@ -1,8 +1,8 @@
 /**
  * Base16 Material Darker 
- * 
+ *
  * @author Nate Peterson
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Material Darker scheme.
- * 
+ *
  * By: Nate Peterson
  */
 extern const base16_scheme base16_material_darker;

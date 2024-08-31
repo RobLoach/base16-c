@@ -1,8 +1,8 @@
 /**
  * Base16 Rosé Pine Moon 
- * 
+ *
  * @author Emilia Dunfelt &lt;edun@dunfelt.se&gt;
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Rosé Pine Moon scheme.
- * 
+ *
  * By: Emilia Dunfelt &lt;edun@dunfelt.se&gt;
  */
 extern const base16_scheme base16_rose_pine_moon;

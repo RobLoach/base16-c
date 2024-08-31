@@ -1,8 +1,8 @@
 /**
  * Base16 Classic Dark 
- * 
+ *
  * @author Jason Heeris (http://heeris.id.au)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Classic Dark scheme.
- * 
+ *
  * By: Jason Heeris (http://heeris.id.au)
  */
 extern const base16_scheme base16_classic_dark;

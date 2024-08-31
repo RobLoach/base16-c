@@ -1,8 +1,8 @@
 /**
  * Base16 Tokyodark Terminal 
- * 
+ *
  * @author Tiagovla (https://github.com/tiagovla/)
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Tokyodark Terminal scheme.
- * 
+ *
  * By: Tiagovla (https://github.com/tiagovla/)
  */
 extern const base16_scheme base16_tokyodark_terminal;

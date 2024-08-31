@@ -1,8 +1,8 @@
 /**
  * Base16 Tokyo Night Moon 
- * 
+ *
  * @author Ólafur Bjarki Bogason
- * 
+ *
  * Template by Rob Loach (https://robloach.net)
  * base16-h: https://github.com/robloach/base16-h
  */
@@ -34,7 +34,7 @@ typedef struct base16_scheme {
 
 /**
  * The Base16 Tokyo Night Moon scheme.
- * 
+ *
  * By: Ólafur Bjarki Bogason
  */
 extern const base16_scheme base16_tokyo_night_moon;
