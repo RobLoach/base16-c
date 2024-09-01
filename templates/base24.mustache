@@ -1,0 +1,88 @@
+/**
+ * Base24 {{scheme-name}} {{scheme-description}}
+ *
+ * @author {{scheme-author}}
+ *
+ * Template by Rob Loach (https://robloach.net)
+ * base16-h: https://github.com/robloach/base16-h
+ */
+
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
+
+/**
+ * A single color used for Base16 or Base24.
+ */
+typedef struct base16_color {
+    unsigned char r; /** Red channel */
+    unsigned char g; /** Green channel */
+    unsigned char b; /** Blue channel */
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
+
+/**
+ * A Base16 Scheme.
+ */
+typedef struct base16_scheme {
+    const char *name; /** The name of the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
+} base16_scheme;
+
+#endif  /* BASE16_SCHEME_H__ */
+
+#ifndef BASE16_{{scheme-slug-underscored}}_H__
+#define BASE16_{{scheme-slug-underscored}}_H__
+
+/**
+ * The Base24 {{scheme-name}} scheme.
+ *
+ * By: {{scheme-author}}
+ */
+extern const base16_scheme base24_{{scheme-slug-underscored}};
+
+#endif  /* BASE16_{{scheme-slug-underscored}}_H__ */
+
+#if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
+#ifndef BASE24_{{scheme-slug-underscored}}_IMPLEMENTATION_ONCE
+#define BASE24_{{scheme-slug-underscored}}_IMPLEMENTATION_ONCE
+
+const base16_scheme base24_{{scheme-slug-underscored}} = {
+    .name = "{{scheme-name}}",
+    .base = {
+        { .r = {{base00-rgb-r}}, .g = {{base00-rgb-g}}, .b = {{base00-rgb-b}} },
+        { .r = {{base01-rgb-r}}, .g = {{base01-rgb-g}}, .b = {{base01-rgb-b}} },
+        { .r = {{base02-rgb-r}}, .g = {{base02-rgb-g}}, .b = {{base02-rgb-b}} },
+        { .r = {{base03-rgb-r}}, .g = {{base03-rgb-g}}, .b = {{base03-rgb-b}} },
+        { .r = {{base04-rgb-r}}, .g = {{base04-rgb-g}}, .b = {{base04-rgb-b}} },
+        { .r = {{base05-rgb-r}}, .g = {{base05-rgb-g}}, .b = {{base05-rgb-b}} },
+        { .r = {{base06-rgb-r}}, .g = {{base06-rgb-g}}, .b = {{base06-rgb-b}} },
+        { .r = {{base07-rgb-r}}, .g = {{base07-rgb-g}}, .b = {{base07-rgb-b}} },
+        { .r = {{base08-rgb-r}}, .g = {{base08-rgb-g}}, .b = {{base08-rgb-b}} },
+        { .r = {{base09-rgb-r}}, .g = {{base09-rgb-g}}, .b = {{base09-rgb-b}} },
+        { .r = {{base0A-rgb-r}}, .g = {{base0A-rgb-g}}, .b = {{base0A-rgb-b}} },
+        { .r = {{base0B-rgb-r}}, .g = {{base0B-rgb-g}}, .b = {{base0B-rgb-b}} },
+        { .r = {{base0C-rgb-r}}, .g = {{base0C-rgb-g}}, .b = {{base0C-rgb-b}} },
+        { .r = {{base0D-rgb-r}}, .g = {{base0D-rgb-g}}, .b = {{base0D-rgb-b}} },
+        { .r = {{base0E-rgb-r}}, .g = {{base0E-rgb-g}}, .b = {{base0E-rgb-b}} },
+        { .r = {{base0F-rgb-r}}, .g = {{base0F-rgb-g}}, .b = {{base0F-rgb-b}} },
+
+        /* Base24 */
+        { .r = {{base10-rgb-r}}, .g = {{base10-rgb-g}}, .b = {{base10-rgb-b}} },
+        { .r = {{base11-rgb-r}}, .g = {{base11-rgb-g}}, .b = {{base11-rgb-b}} },
+        { .r = {{base12-rgb-r}}, .g = {{base12-rgb-g}}, .b = {{base12-rgb-b}} },
+        { .r = {{base13-rgb-r}}, .g = {{base13-rgb-g}}, .b = {{base13-rgb-b}} },
+        { .r = {{base14-rgb-r}}, .g = {{base14-rgb-g}}, .b = {{base14-rgb-b}} },
+        { .r = {{base15-rgb-r}}, .g = {{base15-rgb-g}}, .b = {{base15-rgb-b}} },
+        { .r = {{base16-rgb-r}}, .g = {{base16-rgb-g}}, .b = {{base16-rgb-b}} },
+        { .r = {{base17-rgb-r}}, .g = {{base17-rgb-g}}, .b = {{base17-rgb-b}} }
+    },
+    .system = 24
+};
+
+#endif  /* BASE24_{{scheme-slug-underscored}}_IMPLEMENTATION_ONCE */
+#endif  /* BASE16_IMPLEMENTATION */

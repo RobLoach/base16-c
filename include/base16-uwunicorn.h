@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_uwunicorn_H__
 #define BASE16_uwunicorn_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_uwunicorn = {
         { .r = 156, .g = 95, .b = 206 },
         { .r = 106, .g = 158, .b = 181 },
         { .r = 120, .g = 163, .b = 143 },
-        { .r = 163, .g = 160, .b = 121 }
-    }
+        { .r = 163, .g = 160, .b = 121 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 36, .g = 27, .b = 38 },
+        { .r = 36, .g = 27, .b = 38 },
+        { .r = 135, .g = 123, .b = 182 },
+        { .r = 168, .g = 74, .b = 115 },
+        { .r = 201, .g = 101, .b = 191 },
+        { .r = 156, .g = 95, .b = 206 },
+        { .r = 106, .g = 158, .b = 181 },
+        { .r = 120, .g = 163, .b = 143 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_uwunicorn_IMPLEMENTATION_ONCE */

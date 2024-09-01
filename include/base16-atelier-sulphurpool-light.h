@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_atelier_sulphurpool_light_H__
 #define BASE16_atelier_sulphurpool_light_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_atelier_sulphurpool_light = {
         { .r = 34, .g = 162, .b = 201 },
         { .r = 61, .g = 143, .b = 209 },
         { .r = 102, .g = 121, .b = 204 },
-        { .r = 156, .g = 99, .b = 122 }
-    }
+        { .r = 156, .g = 99, .b = 122 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 245, .g = 247, .b = 255 },
+        { .r = 245, .g = 247, .b = 255 },
+        { .r = 201, .g = 73, .b = 34 },
+        { .r = 192, .g = 139, .b = 48 },
+        { .r = 172, .g = 151, .b = 57 },
+        { .r = 34, .g = 162, .b = 201 },
+        { .r = 61, .g = 143, .b = 209 },
+        { .r = 102, .g = 121, .b = 204 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_atelier_sulphurpool_light_IMPLEMENTATION_ONCE */

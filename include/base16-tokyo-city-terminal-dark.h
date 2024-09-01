@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_tokyo_city_terminal_dark_H__
 #define BASE16_tokyo_city_terminal_dark_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_tokyo_city_terminal_dark = {
         { .r = 112, .g = 225, .b = 232 },
         { .r = 83, .g = 154, .b = 252 },
         { .r = 182, .g = 45, .b = 101 },
-        { .r = 221, .g = 157, .b = 130 }
-    }
+        { .r = 221, .g = 157, .b = 130 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 23, .g = 29, .b = 35 },
+        { .r = 23, .g = 29, .b = 35 },
+        { .r = 217, .g = 84, .b = 104 },
+        { .r = 235, .g = 191, .b = 131 },
+        { .r = 139, .g = 212, .b = 156 },
+        { .r = 112, .g = 225, .b = 232 },
+        { .r = 83, .g = 154, .b = 252 },
+        { .r = 182, .g = 45, .b = 101 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_tokyo_city_terminal_dark_IMPLEMENTATION_ONCE */

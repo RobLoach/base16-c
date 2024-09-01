@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_windows_95_H__
 #define BASE16_windows_95_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_windows_95 = {
         { .r = 84, .g = 252, .b = 252 },
         { .r = 84, .g = 84, .b = 252 },
         { .r = 252, .g = 84, .b = 252 },
-        { .r = 0, .g = 168, .b = 0 }
-    }
+        { .r = 0, .g = 168, .b = 0 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 0, .g = 0, .b = 0 },
+        { .r = 0, .g = 0, .b = 0 },
+        { .r = 252, .g = 84, .b = 84 },
+        { .r = 252, .g = 252, .b = 84 },
+        { .r = 84, .g = 252, .b = 84 },
+        { .r = 84, .g = 252, .b = 252 },
+        { .r = 84, .g = 84, .b = 252 },
+        { .r = 252, .g = 84, .b = 252 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_windows_95_IMPLEMENTATION_ONCE */

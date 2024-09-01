@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_precious_light_warm_H__
 #define BASE16_precious_light_warm_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_precious_light_warm = {
         { .r = 14, .g = 119, .b = 103 },
         { .r = 36, .g = 109, .b = 165 },
         { .r = 122, .g = 80, .b = 198 },
-        { .r = 168, .g = 63, .b = 146 }
-    }
+        { .r = 168, .g = 63, .b = 146 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 255, .g = 245, .b = 229 },
+        { .r = 255, .g = 245, .b = 229 },
+        { .r = 177, .g = 71, .b = 69 },
+        { .r = 135, .g = 101, .b = 0 },
+        { .r = 85, .g = 115, .b = 0 },
+        { .r = 14, .g = 119, .b = 103 },
+        { .r = 36, .g = 109, .b = 165 },
+        { .r = 122, .g = 80, .b = 198 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_precious_light_warm_IMPLEMENTATION_ONCE */

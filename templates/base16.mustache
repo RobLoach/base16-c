@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_{{scheme-slug-underscored}}_H__
 #define BASE16_{{scheme-slug-underscored}}_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_{{scheme-slug-underscored}} = {
         { .r = {{base0C-rgb-r}}, .g = {{base0C-rgb-g}}, .b = {{base0C-rgb-b}} },
         { .r = {{base0D-rgb-r}}, .g = {{base0D-rgb-g}}, .b = {{base0D-rgb-b}} },
         { .r = {{base0E-rgb-r}}, .g = {{base0E-rgb-g}}, .b = {{base0E-rgb-b}} },
-        { .r = {{base0F-rgb-r}}, .g = {{base0F-rgb-g}}, .b = {{base0F-rgb-b}} }
-    }
+        { .r = {{base0F-rgb-r}}, .g = {{base0F-rgb-g}}, .b = {{base0F-rgb-b}} },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = {{base00-rgb-r}}, .g = {{base00-rgb-g}}, .b = {{base00-rgb-b}} },
+        { .r = {{base00-rgb-r}}, .g = {{base00-rgb-g}}, .b = {{base00-rgb-b}} },
+        { .r = {{base08-rgb-r}}, .g = {{base08-rgb-g}}, .b = {{base08-rgb-b}} },
+        { .r = {{base0A-rgb-r}}, .g = {{base0A-rgb-g}}, .b = {{base0A-rgb-b}} },
+        { .r = {{base0B-rgb-r}}, .g = {{base0B-rgb-g}}, .b = {{base0B-rgb-b}} },
+        { .r = {{base0C-rgb-r}}, .g = {{base0C-rgb-g}}, .b = {{base0C-rgb-b}} },
+        { .r = {{base0D-rgb-r}}, .g = {{base0D-rgb-g}}, .b = {{base0D-rgb-b}} },
+        { .r = {{base0E-rgb-r}}, .g = {{base0E-rgb-g}}, .b = {{base0E-rgb-b}} }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_{{scheme-slug-underscored}}_IMPLEMENTATION_ONCE */

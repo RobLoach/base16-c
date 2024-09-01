@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_rose_pine_dawn_H__
 #define BASE16_rose_pine_dawn_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_rose_pine_dawn = {
         { .r = 86, .g = 148, .b = 159 },
         { .r = 144, .g = 122, .b = 169 },
         { .r = 234, .g = 157, .b = 52 },
-        { .r = 206, .g = 202, .b = 205 }
-    }
+        { .r = 206, .g = 202, .b = 205 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 250, .g = 244, .b = 237 },
+        { .r = 250, .g = 244, .b = 237 },
+        { .r = 180, .g = 99, .b = 122 },
+        { .r = 215, .g = 130, .b = 126 },
+        { .r = 40, .g = 105, .b = 131 },
+        { .r = 86, .g = 148, .b = 159 },
+        { .r = 144, .g = 122, .b = 169 },
+        { .r = 234, .g = 157, .b = 52 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_rose_pine_dawn_IMPLEMENTATION_ONCE */

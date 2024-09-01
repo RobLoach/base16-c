@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_catppuccin_latte_H__
 #define BASE16_catppuccin_latte_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_catppuccin_latte = {
         { .r = 23, .g = 146, .b = 153 },
         { .r = 30, .g = 102, .b = 245 },
         { .r = 136, .g = 57, .b = 239 },
-        { .r = 221, .g = 120, .b = 120 }
-    }
+        { .r = 221, .g = 120, .b = 120 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 239, .g = 241, .b = 245 },
+        { .r = 239, .g = 241, .b = 245 },
+        { .r = 210, .g = 15, .b = 57 },
+        { .r = 223, .g = 142, .b = 29 },
+        { .r = 64, .g = 160, .b = 43 },
+        { .r = 23, .g = 146, .b = 153 },
+        { .r = 30, .g = 102, .b = 245 },
+        { .r = 136, .g = 57, .b = 239 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_catppuccin_latte_IMPLEMENTATION_ONCE */

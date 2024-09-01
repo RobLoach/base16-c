@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_cupertino_H__
 #define BASE16_cupertino_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_cupertino = {
         { .r = 49, .g = 132, .b = 149 },
         { .r = 0, .g = 0, .b = 255 },
         { .r = 169, .g = 13, .b = 145 },
-        { .r = 130, .g = 107, .b = 40 }
-    }
+        { .r = 130, .g = 107, .b = 40 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 255, .g = 255, .b = 255 },
+        { .r = 255, .g = 255, .b = 255 },
+        { .r = 196, .g = 26, .b = 21 },
+        { .r = 130, .g = 107, .b = 40 },
+        { .r = 0, .g = 116, .b = 0 },
+        { .r = 49, .g = 132, .b = 149 },
+        { .r = 0, .g = 0, .b = 255 },
+        { .r = 169, .g = 13, .b = 145 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_cupertino_IMPLEMENTATION_ONCE */

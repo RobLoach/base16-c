@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_summercamp_H__
 #define BASE16_summercamp_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_summercamp = {
         { .r = 90, .g = 235, .b = 188 },
         { .r = 72, .g = 155, .b = 240 },
         { .r = 255, .g = 128, .b = 128 },
-        { .r = 246, .g = 155, .b = 231 }
-    }
+        { .r = 246, .g = 155, .b = 231 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 28, .g = 24, .b = 16 },
+        { .r = 28, .g = 24, .b = 16 },
+        { .r = 227, .g = 81, .b = 66 },
+        { .r = 242, .g = 255, .b = 39 },
+        { .r = 92, .g = 235, .b = 90 },
+        { .r = 90, .g = 235, .b = 188 },
+        { .r = 72, .g = 155, .b = 240 },
+        { .r = 255, .g = 128, .b = 128 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_summercamp_IMPLEMENTATION_ONCE */

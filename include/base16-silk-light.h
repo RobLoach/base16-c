@@ -7,27 +7,33 @@
  * base16-h: https://github.com/robloach/base16-h
  */
 
-#ifndef BASE16_H__
-#define BASE16_H__
+#ifndef BASE16_COLOR_H__
+#define BASE16_COLOR_H__
 
 /**
- * A single color used for Base16.
+ * A single color used for Base16 or Base24.
  */
-typedef struct base16_scheme_color {
+typedef struct base16_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_scheme_color;
+} base16_color;
+
+#endif /* BASE16_COLOR_H__ */
+
+#ifndef BASE16_SCHEME_H__
+#define BASE16_SCHEME_H__
 
 /**
  * A Base16 Scheme.
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_scheme_color base[16]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    int system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
-#endif  /* BASE16_H__ */
+#endif  /* BASE16_SCHEME_H__ */
 
 #ifndef BASE16_silk_light_H__
 #define BASE16_silk_light_H__
@@ -63,8 +69,19 @@ const base16_scheme base16_silk_light = {
         { .r = 50, .g = 156, .b = 162 },
         { .r = 57, .g = 170, .b = 201 },
         { .r = 110, .g = 101, .b = 130 },
-        { .r = 134, .g = 83, .b = 105 }
-    }
+        { .r = 134, .g = 83, .b = 105 },
+
+        /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
+        { .r = 233, .g = 241, .b = 239 },
+        { .r = 233, .g = 241, .b = 239 },
+        { .r = 207, .g = 67, .b = 46 },
+        { .r = 207, .g = 173, .b = 37 },
+        { .r = 108, .g = 163, .b = 140 },
+        { .r = 50, .g = 156, .b = 162 },
+        { .r = 57, .g = 170, .b = 201 },
+        { .r = 110, .g = 101, .b = 130 }
+    },
+    .system = 16
 };
 
 #endif  /* BASE16_silk_light_IMPLEMENTATION_ONCE */
