@@ -1,7 +1,7 @@
 /**
- * Base16 Hopscotch 
+ * Base16 Deep Oceanic Next 
  *
- * @author Jan T. Sott
+ * @author spearkkk (https://github.com/spearkkk/deep-oceanic-next)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -57,54 +57,54 @@ typedef struct base16_scheme {
 
 #endif  /* BASE16_SCHEME_H__ */
 
-#ifndef BASE16_hopscotch_H__
-#define BASE16_hopscotch_H__
+#ifndef BASE16_deep_oceanic_next_H__
+#define BASE16_deep_oceanic_next_H__
 
 /**
- * The Base16 Hopscotch scheme.
+ * The Base16 Deep Oceanic Next scheme.
  *
- * @author Jan T. Sott
+ * @author spearkkk (https://github.com/spearkkk/deep-oceanic-next)
  */
-extern const base16_scheme base16_hopscotch;
+extern const base16_scheme base16_deep_oceanic_next;
 
-#endif  /* BASE16_hopscotch_H__ */
+#endif  /* BASE16_deep_oceanic_next_H__ */
 
 #if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
-#ifndef BASE16_hopscotch_IMPLEMENTATION_ONCE
-#define BASE16_hopscotch_IMPLEMENTATION_ONCE
+#ifndef BASE16_deep_oceanic_next_IMPLEMENTATION_ONCE
+#define BASE16_deep_oceanic_next_IMPLEMENTATION_ONCE
 
-const base16_scheme base16_hopscotch = {
-    .name = "Hopscotch",
+const base16_scheme base16_deep_oceanic_next = {
+    .name = "Deep Oceanic Next",
     .base = {
-        { .r = 50, .g = 41, .b = 49 },
-        { .r = 67, .g = 59, .b = 66 },
-        { .r = 92, .g = 84, .b = 91 },
-        { .r = 121, .g = 115, .b = 121 },
-        { .r = 152, .g = 148, .b = 152 },
-        { .r = 185, .g = 181, .b = 184 },
-        { .r = 213, .g = 211, .b = 213 },
-        { .r = 255, .g = 255, .b = 255 },
-        { .r = 221, .g = 70, .b = 76 },
-        { .r = 253, .g = 139, .b = 25 },
-        { .r = 253, .g = 204, .b = 89 },
-        { .r = 143, .g = 193, .b = 62 },
-        { .r = 20, .g = 155, .b = 147 },
-        { .r = 18, .g = 144, .b = 191 },
-        { .r = 200, .g = 94, .b = 124 },
-        { .r = 179, .g = 53, .b = 8 },
+        { .r = 0, .g = 59, .b = 70 },
+        { .r = 0, .g = 79, .b = 94 },
+        { .r = 0, .g = 99, .b = 116 },
+        { .r = 0, .g = 122, .b = 138 },
+        { .r = 0, .g = 147, .b = 163 },
+        { .r = 220, .g = 227, .b = 232 },
+        { .r = 230, .g = 235, .b = 240 },
+        { .r = 240, .g = 245, .b = 245 },
+        { .r = 230, .g = 69, .b = 75 },
+        { .r = 255, .g = 106, .b = 75 },
+        { .r = 255, .g = 204, .b = 102 },
+        { .r = 133, .g = 181, .b = 122 },
+        { .r = 77, .g = 166, .b = 166 },
+        { .r = 58, .g = 130, .b = 230 },
+        { .r = 140, .g = 77, .b = 230 },
+        { .r = 230, .g = 115, .b = 163 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
-        { .r = 50, .g = 41, .b = 49 },
-        { .r = 50, .g = 41, .b = 49 },
-        { .r = 221, .g = 70, .b = 76 },
-        { .r = 253, .g = 204, .b = 89 },
-        { .r = 143, .g = 193, .b = 62 },
-        { .r = 20, .g = 155, .b = 147 },
-        { .r = 18, .g = 144, .b = 191 },
-        { .r = 200, .g = 94, .b = 124 }
+        { .r = 0, .g = 59, .b = 70 },
+        { .r = 0, .g = 59, .b = 70 },
+        { .r = 230, .g = 69, .b = 75 },
+        { .r = 255, .g = 204, .b = 102 },
+        { .r = 133, .g = 181, .b = 122 },
+        { .r = 77, .g = 166, .b = 166 },
+        { .r = 58, .g = 130, .b = 230 },
+        { .r = 140, .g = 77, .b = 230 }
     },
     .system = 16
 };
 
-#endif  /* BASE16_hopscotch_IMPLEMENTATION_ONCE */
+#endif  /* BASE16_deep_oceanic_next_IMPLEMENTATION_ONCE */
 #endif  /* BASE16_IMPLEMENTATION */

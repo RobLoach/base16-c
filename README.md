@@ -1,6 +1,6 @@
 # base16-h
 
-C Headers for [base16] color schemes.
+C Headers for [Base16] and [Base24] color schemes, for use in either [C](https://en.wikipedia.org/wiki/C_(programming_language)) or [C++](https://en.wikipedia.org/wiki/C%2B%2B).
 
 ## Usage
 
@@ -8,18 +8,18 @@ C Headers for [base16] color schemes.
 #include <stdio.h>
 
 #define BASE16_IMPLEMENTATION
-#include "base16-tomorrow.h"
+#include "base24-dracula.h"
 
 int main() {
-    printf("Base16 %s\n", base16_tomorrow.name);
-    printf("  R: %d\n", base16_tomorrow.base[2].r);
-    printf("  G: %d\n", base16_tomorrow.base[2].g);
-    printf("  B: %d\n", base16_tomorrow.base[2].b);
+    printf("Scheme: %s\n", base24_dracula.name);
+    printf("  R: %d\n", base24_dracula.base[2].r);
+    printf("  G: %d\n", base24_dracula.base[2].g);
+    printf("  B: %d\n", base24_dracula.base[2].b);
 
-    // Base16 Tomorrow
-    //   R: 55
-    //   R: 59
-    //   R: 65
+    // Scheme: Dracula
+    //   R: 68
+    //   R: 52
+    //   R: 71
 
     return 0;
 }
@@ -31,5 +31,6 @@ See [`CONTRIBUTING.md`], which contains building and contribution
 instructions.
 
 [base16]: https://github.com/tinted-theming/home
+[base24]: https://github.com/tinted-theming/base24/
 [xfce4-terminal]: https://docs.xfce.org/apps/terminal/start
 [`CONTRIBUTING.md`]: CONTRIBUTING.md
