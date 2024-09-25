@@ -1,6 +1,6 @@
-# base16-h
+# base16-c
 
-C Headers for [Base16] and [Base24] color schemes, for use in either [C](https://en.wikipedia.org/wiki/C_(programming_language)) or [C++](https://en.wikipedia.org/wiki/C%2B%2B).
+C Headers for [Base16] and [Base24] color schemes, for use in [C](https://en.wikipedia.org/wiki/C_(programming_language)) or [C++](https://en.wikipedia.org/wiki/C%2B%2B).
 
 ## Usage
 
