@@ -29,33 +29,33 @@
  * SOFTWARE.
  */
 
-#ifndef BASE16_COLOR_H__
-#define BASE16_COLOR_H__
+#ifndef TINTED_C_COLOR_H__
+#define TINTED_C_COLOR_H__
 
 /**
  * A single color used for Base16 or Base24.
  */
-typedef struct base16_color {
+typedef struct tinted_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_color;
+} tinted_color;
 
-#endif /* BASE16_COLOR_H__ */
+#endif /* TINTED_C_COLOR_H__ */
 
-#ifndef BASE16_SCHEME_H__
-#define BASE16_SCHEME_H__
+#ifndef TINTED_C_SCHEME_H__
+#define TINTED_C_SCHEME_H__
 
 /**
- * A Base16 Scheme.
+ * A Tinted Base16 or Base24 Scheme.
  */
-typedef struct base16_scheme {
+typedef struct tinted_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    tinted_color base[24]; /** An array of the base16 colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
-} base16_scheme;
+} tinted_scheme;
 
-#endif  /* BASE16_SCHEME_H__ */
+#endif  /* TINTED_C_SCHEME_H__ */
 
 #ifndef BASE16_nova_H__
 #define BASE16_nova_H__
@@ -65,15 +65,15 @@ typedef struct base16_scheme {
  *
  * @author George Essig (https://github.com/gessig), Trevor D. Miller (https://trevordmiller.com)
  */
-extern const base16_scheme base16_nova;
+extern const tinted_scheme base16_nova;
 
 #endif  /* BASE16_nova_H__ */
 
-#if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
+#if defined(BASE16_IMPLEMENTATION) && !defined(TINTED_HEADER_ONLY)
 #ifndef BASE16_nova_IMPLEMENTATION_ONCE
 #define BASE16_nova_IMPLEMENTATION_ONCE
 
-const base16_scheme base16_nova = {
+const tinted_scheme base16_nova = {
     .name = "Nova",
     .base = {
         { .r = 60, .g = 76, .b = 85 },

@@ -1,0 +1,110 @@
+/**
+ * Base24 Catppuccin Mocha 
+ *
+ * @author https://github.com/catppuccin/catppuccin
+ *
+ * Template by Rob Loach (https://robloach.net)
+ * base16-c: https://github.com/RobLoach/base16-c
+ *
+ * License: MIT
+ *
+ * Copyright (c) 2024 Rob Loach (https://robloach.net)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+#ifndef TINTED_C_COLOR_H__
+#define TINTED_C_COLOR_H__
+
+/**
+ * A single color used for Base16 or Base24.
+ */
+typedef struct tinted_color {
+    unsigned char r; /** Red channel */
+    unsigned char g; /** Green channel */
+    unsigned char b; /** Blue channel */
+} tinted_color;
+
+#endif /* TINTED_C_COLOR_H__ */
+
+#ifndef TINTED_C_SCHEME_H__
+#define TINTED_C_SCHEME_H__
+
+/**
+ * A Tinted Base16 or Base24 Scheme.
+ */
+typedef struct tinted_scheme {
+    const char *name; /** The name of the scheme. */
+    tinted_color base[24]; /** An array of the base16 colors for the scheme. */
+    unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
+} tinted_scheme;
+
+#endif  /* TINTED_C_SCHEME_H__ */
+
+#ifndef BASE24_catppuccin_mocha_H__
+#define BASE24_catppuccin_mocha_H__
+
+/**
+ * The Base24 Catppuccin Mocha scheme.
+ *
+ * @author https://github.com/catppuccin/catppuccin
+ */
+extern const tinted_scheme base24_catppuccin_mocha;
+
+#endif  /* BASE24_catppuccin_mocha_H__ */
+
+#if defined(BASE16_IMPLEMENTATION) && !defined(TINTED_HEADER_ONLY)
+#ifndef BASE24_catppuccin_mocha_IMPLEMENTATION_ONCE
+#define BASE24_catppuccin_mocha_IMPLEMENTATION_ONCE
+
+const tinted_scheme base24_catppuccin_mocha = {
+    .name = "Catppuccin Mocha",
+    .base = {
+        { .r = 30, .g = 30, .b = 46 },
+        { .r = 24, .g = 24, .b = 37 },
+        { .r = 49, .g = 50, .b = 68 },
+        { .r = 69, .g = 71, .b = 90 },
+        { .r = 88, .g = 91, .b = 112 },
+        { .r = 205, .g = 214, .b = 244 },
+        { .r = 245, .g = 224, .b = 220 },
+        { .r = 180, .g = 190, .b = 254 },
+        { .r = 243, .g = 139, .b = 168 },
+        { .r = 250, .g = 179, .b = 135 },
+        { .r = 249, .g = 226, .b = 175 },
+        { .r = 166, .g = 227, .b = 161 },
+        { .r = 148, .g = 226, .b = 213 },
+        { .r = 137, .g = 180, .b = 250 },
+        { .r = 203, .g = 166, .b = 247 },
+        { .r = 242, .g = 205, .b = 205 },
+
+        /* Base24 */
+        { .r = 24, .g = 24, .b = 37 },
+        { .r = 17, .g = 17, .b = 27 },
+        { .r = 235, .g = 160, .b = 172 },
+        { .r = 245, .g = 224, .b = 220 },
+        { .r = 166, .g = 227, .b = 161 },
+        { .r = 137, .g = 220, .b = 235 },
+        { .r = 116, .g = 199, .b = 236 },
+        { .r = 245, .g = 194, .b = 231 }
+    },
+    .system = 24
+};
+
+#endif  /* BASE24_catppuccin_mocha_IMPLEMENTATION_ONCE */
+#endif  /* BASE16_IMPLEMENTATION */

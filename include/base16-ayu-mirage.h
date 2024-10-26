@@ -29,33 +29,33 @@
  * SOFTWARE.
  */
 
-#ifndef BASE16_COLOR_H__
-#define BASE16_COLOR_H__
+#ifndef TINTED_C_COLOR_H__
+#define TINTED_C_COLOR_H__
 
 /**
  * A single color used for Base16 or Base24.
  */
-typedef struct base16_color {
+typedef struct tinted_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_color;
+} tinted_color;
 
-#endif /* BASE16_COLOR_H__ */
+#endif /* TINTED_C_COLOR_H__ */
 
-#ifndef BASE16_SCHEME_H__
-#define BASE16_SCHEME_H__
+#ifndef TINTED_C_SCHEME_H__
+#define TINTED_C_SCHEME_H__
 
 /**
- * A Base16 Scheme.
+ * A Tinted Base16 or Base24 Scheme.
  */
-typedef struct base16_scheme {
+typedef struct tinted_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    tinted_color base[24]; /** An array of the base16 colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
-} base16_scheme;
+} tinted_scheme;
 
-#endif  /* BASE16_SCHEME_H__ */
+#endif  /* TINTED_C_SCHEME_H__ */
 
 #ifndef BASE16_ayu_mirage_H__
 #define BASE16_ayu_mirage_H__
@@ -65,15 +65,15 @@ typedef struct base16_scheme {
  *
  * @author Khue Nguyen &lt;Z5483Y@gmail.com&gt;
  */
-extern const base16_scheme base16_ayu_mirage;
+extern const tinted_scheme base16_ayu_mirage;
 
 #endif  /* BASE16_ayu_mirage_H__ */
 
-#if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
+#if defined(BASE16_IMPLEMENTATION) && !defined(TINTED_HEADER_ONLY)
 #ifndef BASE16_ayu_mirage_IMPLEMENTATION_ONCE
 #define BASE16_ayu_mirage_IMPLEMENTATION_ONCE
 
-const base16_scheme base16_ayu_mirage = {
+const tinted_scheme base16_ayu_mirage = {
     .name = "Ayu Mirage",
     .base = {
         { .r = 23, .g = 27, .b = 36 },
