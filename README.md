@@ -18,8 +18,8 @@ int main() {
 
     // Scheme: Dracula
     //   R: 68
-    //   G: 52
-    //   R: 71
+    //   G: 71
+    //   B: 90
 
     return 0;
 }
