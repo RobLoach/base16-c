@@ -1,8 +1,6 @@
 base16:
-    extension: .h
-    output: include
+    filename: include/base16-{{ scheme-slug }}.h
 
 base24:
-    extension: .h
-    output: include
+    filename: include/base24-{{ scheme-slug }}.h
     supported-systems: [base24]
