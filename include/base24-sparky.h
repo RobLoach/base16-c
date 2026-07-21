@@ -51,14 +51,14 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
 #endif  /* BASE16_SCHEME_H__ */
 
-#ifndef BASE16_sparky_H__
-#define BASE16_sparky_H__
+#ifndef BASE24_sparky_H__
+#define BASE24_sparky_H__
 
 /**
  * The Base24 Sparky scheme.
@@ -67,7 +67,7 @@ typedef struct base16_scheme {
  */
 extern const base16_scheme base24_sparky;
 
-#endif  /* BASE16_sparky_H__ */
+#endif  /* BASE24_sparky_H__ */
 
 #if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
 #ifndef BASE24_sparky_IMPLEMENTATION_ONCE

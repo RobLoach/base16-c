@@ -51,14 +51,14 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
 #endif  /* BASE16_SCHEME_H__ */
 
-#ifndef BASE16_chalk_H__
-#define BASE16_chalk_H__
+#ifndef BASE24_chalk_H__
+#define BASE24_chalk_H__
 
 /**
  * The Base24 Chalk scheme.
@@ -67,7 +67,7 @@ typedef struct base16_scheme {
  */
 extern const base16_scheme base24_chalk;
 
-#endif  /* BASE16_chalk_H__ */
+#endif  /* BASE24_chalk_H__ */
 
 #if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
 #ifndef BASE24_chalk_IMPLEMENTATION_ONCE

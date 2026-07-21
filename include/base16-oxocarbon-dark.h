@@ -1,7 +1,7 @@
 /**
  * Base16 Oxocarbon Dark 
  *
- * @author shaunsingh/IBM
+ * @author shaunsingh/IBM, Tinted Theming (https://github.com/tinted-theming)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Oxocarbon Dark scheme.
  *
- * @author shaunsingh/IBM
+ * @author shaunsingh/IBM, Tinted Theming (https://github.com/tinted-theming)
  */
 extern const base16_scheme base16_oxocarbon_dark;
 
@@ -84,23 +84,23 @@ const base16_scheme base16_oxocarbon_dark = {
         { .r = 242, .g = 244, .b = 248 },
         { .r = 255, .g = 255, .b = 255 },
         { .r = 8, .g = 189, .b = 186 },
-        { .r = 61, .g = 219, .b = 217 },
-        { .r = 120, .g = 169, .b = 255 },
         { .r = 238, .g = 83, .b = 150 },
-        { .r = 51, .g = 177, .b = 255 },
         { .r = 255, .g = 126, .b = 182 },
+        { .r = 255, .g = 111, .b = 0 },
         { .r = 66, .g = 190, .b = 101 },
+        { .r = 61, .g = 219, .b = 217 },
+        { .r = 51, .g = 177, .b = 255 },
         { .r = 190, .g = 149, .b = 255 },
         { .r = 130, .g = 207, .b = 255 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
         { .r = 22, .g = 22, .b = 22 },
         { .r = 22, .g = 22, .b = 22 },
-        { .r = 61, .g = 219, .b = 217 },
         { .r = 238, .g = 83, .b = 150 },
-        { .r = 51, .g = 177, .b = 255 },
-        { .r = 255, .g = 126, .b = 182 },
+        { .r = 255, .g = 111, .b = 0 },
         { .r = 66, .g = 190, .b = 101 },
+        { .r = 61, .g = 219, .b = 217 },
+        { .r = 51, .g = 177, .b = 255 },
         { .r = 190, .g = 149, .b = 255 }
     },
     .system = 16

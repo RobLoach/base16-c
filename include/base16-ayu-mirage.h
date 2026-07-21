@@ -1,7 +1,7 @@
 /**
  * Base16 Ayu Mirage 
  *
- * @author Khue Nguyen &lt;Z5483Y@gmail.com&gt;
+ * @author Tinted Theming (https://github.com/tinted-theming), Ayu Theme (https://github.com/ayu-theme)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Ayu Mirage scheme.
  *
- * @author Khue Nguyen &lt;Z5483Y@gmail.com&gt;
+ * @author Tinted Theming (https://github.com/tinted-theming), Ayu Theme (https://github.com/ayu-theme)
  */
 extern const base16_scheme base16_ayu_mirage;
 
@@ -76,11 +76,11 @@ extern const base16_scheme base16_ayu_mirage;
 const base16_scheme base16_ayu_mirage = {
     .name = "Ayu Mirage",
     .base = {
-        { .r = 23, .g = 27, .b = 36 },
         { .r = 31, .g = 36, .b = 48 },
         { .r = 36, .g = 41, .b = 54 },
+        { .r = 50, .g = 56, .b = 68 },
+        { .r = 74, .g = 80, .b = 89 },
         { .r = 112, .g = 122, .b = 140 },
-        { .r = 138, .g = 145, .b = 153 },
         { .r = 204, .g = 202, .b = 194 },
         { .r = 217, .g = 215, .b = 206 },
         { .r = 243, .g = 244, .b = 245 },
@@ -89,18 +89,18 @@ const base16_scheme base16_ayu_mirage = {
         { .r = 255, .g = 209, .b = 115 },
         { .r = 213, .g = 255, .b = 128 },
         { .r = 149, .g = 230, .b = 203 },
-        { .r = 92, .g = 207, .b = 230 },
+        { .r = 115, .g = 208, .b = 255 },
         { .r = 212, .g = 191, .b = 255 },
-        { .r = 242, .g = 158, .b = 116 },
+        { .r = 242, .g = 121, .b = 131 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
-        { .r = 23, .g = 27, .b = 36 },
-        { .r = 23, .g = 27, .b = 36 },
+        { .r = 31, .g = 36, .b = 48 },
+        { .r = 31, .g = 36, .b = 48 },
         { .r = 242, .g = 135, .b = 121 },
         { .r = 255, .g = 209, .b = 115 },
         { .r = 213, .g = 255, .b = 128 },
         { .r = 149, .g = 230, .b = 203 },
-        { .r = 92, .g = 207, .b = 230 },
+        { .r = 115, .g = 208, .b = 255 },
         { .r = 212, .g = 191, .b = 255 }
     },
     .system = 16

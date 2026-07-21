@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -79,14 +79,14 @@ const base16_scheme base16_tokyo_night_moon = {
         { .r = 34, .g = 36, .b = 54 },
         { .r = 30, .g = 32, .b = 48 },
         { .r = 45, .g = 63, .b = 118 },
+        { .r = 59, .g = 66, .b = 97 },
         { .r = 99, .g = 109, .b = 166 },
         { .r = 130, .g = 139, .b = 184 },
-        { .r = 59, .g = 66, .b = 97 },
-        { .r = 130, .g = 139, .b = 184 },
+        { .r = 174, .g = 180, .b = 209 },
         { .r = 200, .g = 211, .b = 245 },
         { .r = 255, .g = 117, .b = 127 },
         { .r = 255, .g = 199, .b = 119 },
-        { .r = 255, .g = 199, .b = 119 },
+        { .r = 255, .g = 223, .b = 119 },
         { .r = 195, .g = 232, .b = 141 },
         { .r = 134, .g = 225, .b = 252 },
         { .r = 130, .g = 170, .b = 255 },
@@ -97,7 +97,7 @@ const base16_scheme base16_tokyo_night_moon = {
         { .r = 34, .g = 36, .b = 54 },
         { .r = 34, .g = 36, .b = 54 },
         { .r = 255, .g = 117, .b = 127 },
-        { .r = 255, .g = 199, .b = 119 },
+        { .r = 255, .g = 223, .b = 119 },
         { .r = 195, .g = 232, .b = 141 },
         { .r = 134, .g = 225, .b = 252 },
         { .r = 130, .g = 170, .b = 255 },

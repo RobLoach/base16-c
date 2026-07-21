@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -82,8 +82,8 @@ const base16_scheme base16_material_lighter = {
         { .r = 204, .g = 215, .b = 218 },
         { .r = 135, .g = 150, .b = 176 },
         { .r = 128, .g = 203, .b = 196 },
-        { .r = 128, .g = 203, .b = 196 },
-        { .r = 255, .g = 255, .b = 255 },
+        { .r = 67, .g = 163, .b = 154 },
+        { .r = 0, .g = 0, .b = 0 },
         { .r = 255, .g = 83, .b = 112 },
         { .r = 247, .g = 109, .b = 71 },
         { .r = 255, .g = 182, .b = 44 },

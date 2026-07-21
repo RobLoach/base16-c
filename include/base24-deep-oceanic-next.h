@@ -1,7 +1,7 @@
 /**
  * Base24 Deep Oceanic Next 
  *
- * @author spearkkk (https://github.com/spearkkk/deep-oceanic-next)
+ * @author spearkkk (https://github.com/spearkkk)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,23 +51,23 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
 #endif  /* BASE16_SCHEME_H__ */
 
-#ifndef BASE16_deep_oceanic_next_H__
-#define BASE16_deep_oceanic_next_H__
+#ifndef BASE24_deep_oceanic_next_H__
+#define BASE24_deep_oceanic_next_H__
 
 /**
  * The Base24 Deep Oceanic Next scheme.
  *
- * @author spearkkk (https://github.com/spearkkk/deep-oceanic-next)
+ * @author spearkkk (https://github.com/spearkkk)
  */
 extern const base16_scheme base24_deep_oceanic_next;
 
-#endif  /* BASE16_deep_oceanic_next_H__ */
+#endif  /* BASE24_deep_oceanic_next_H__ */
 
 #if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
 #ifndef BASE24_deep_oceanic_next_IMPLEMENTATION_ONCE
@@ -76,32 +76,32 @@ extern const base16_scheme base24_deep_oceanic_next;
 const base16_scheme base24_deep_oceanic_next = {
     .name = "Deep Oceanic Next",
     .base = {
-        { .r = 0, .g = 59, .b = 70 },
-        { .r = 0, .g = 79, .b = 94 },
-        { .r = 0, .g = 99, .b = 116 },
-        { .r = 0, .g = 122, .b = 138 },
+        { .r = 0, .g = 28, .b = 31 },
+        { .r = 0, .g = 41, .b = 49 },
+        { .r = 0, .g = 54, .b = 64 },
+        { .r = 0, .g = 72, .b = 82 },
         { .r = 0, .g = 147, .b = 163 },
-        { .r = 220, .g = 227, .b = 232 },
-        { .r = 230, .g = 235, .b = 240 },
-        { .r = 240, .g = 245, .b = 245 },
-        { .r = 230, .g = 69, .b = 75 },
-        { .r = 255, .g = 106, .b = 75 },
-        { .r = 255, .g = 204, .b = 102 },
-        { .r = 133, .g = 181, .b = 122 },
-        { .r = 77, .g = 166, .b = 166 },
-        { .r = 58, .g = 130, .b = 230 },
-        { .r = 140, .g = 77, .b = 230 },
-        { .r = 230, .g = 115, .b = 163 },
+        { .r = 212, .g = 225, .b = 232 },
+        { .r = 224, .g = 233, .b = 239 },
+        { .r = 242, .g = 247, .b = 249 },
+        { .r = 211, .g = 70, .b = 77 },
+        { .r = 227, .g = 117, .b = 82 },
+        { .r = 243, .g = 184, .b = 99 },
+        { .r = 99, .g = 183, .b = 132 },
+        { .r = 79, .g = 183, .b = 174 },
+        { .r = 86, .g = 140, .b = 207 },
+        { .r = 139, .g = 102, .b = 214 },
+        { .r = 208, .g = 101, .b = 142 },
 
         /* Base24 */
-        { .r = 0, .g = 17, .b = 20 },
-        { .r = 0, .g = 10, .b = 13 },
-        { .r = 255, .g = 90, .b = 97 },
-        { .r = 255, .g = 221, .b = 128 },
-        { .r = 153, .g = 216, .b = 160 },
-        { .r = 102, .g = 204, .b = 204 },
-        { .r = 77, .g = 166, .b = 255 },
-        { .r = 163, .g = 102, .b = 255 }
+        { .r = 31, .g = 38, .b = 40 },
+        { .r = 42, .g = 47, .b = 48 },
+        { .r = 255, .g = 102, .b = 112 },
+        { .r = 255, .g = 224, .b = 138 },
+        { .r = 114, .g = 225, .b = 166 },
+        { .r = 77, .g = 227, .b = 227 },
+        { .r = 92, .g = 174, .b = 255 },
+        { .r = 183, .g = 136, .b = 255 }
     },
     .system = 24
 };
