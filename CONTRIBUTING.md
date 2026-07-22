@@ -21,6 +21,10 @@
     ```sh
     tinted-builder-rust build base16-h
     ```
+1. Regenerate the aggregate `include/base16.h` header
+    ```sh
+    scripts/build-aggregate.sh
+    ```
 
 If you have more questions about [tinted-builder-rust], have a look at
 the information on the GitHub page.

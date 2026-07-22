@@ -1,17 +1,27 @@
-# Executable
-add_executable(base16_c_test base16_c_test.c)
+# Tests
+set(BASE16_C_TESTS
+    base16_c_test
+    base16_aggregate_test
+    base16_aggregate_empty_test
+    base16_aggregate_all_test
+)
 
-# Options
-if (MSVC)
-    target_compile_options(base16_c_test PRIVATE /Wall /W4)
-else()
-    target_compile_options(base16_c_test PRIVATE -Wall -Wextra -Wconversion -Wsign-conversion)
-endif()
+foreach(BASE16_C_TEST ${BASE16_C_TESTS})
+    # Executable
+    add_executable(${BASE16_C_TEST} ${BASE16_C_TEST}.c)
 
-set_target_properties(base16_c_test PROPERTIES C_STANDARD 90)
+    # Options
+    if (MSVC)
+        target_compile_options(${BASE16_C_TEST} PRIVATE /Wall /W4)
+    else()
+        target_compile_options(${BASE16_C_TEST} PRIVATE -Wall -Wextra -Wconversion -Wsign-conversion)
+    endif()
 
-# Link to the library
-target_link_libraries(base16_c_test base16_c)
+    set_target_properties(${BASE16_C_TEST} PROPERTIES C_STANDARD 90)
 
-# Build the test
-add_test(NAME base16_c_test COMMAND base16_c_test)
+    # Link to the library
+    target_link_libraries(${BASE16_C_TEST} base16_c)
+
+    # Build the test
+    add_test(NAME ${BASE16_C_TEST} COMMAND ${BASE16_C_TEST})
+endforeach()
