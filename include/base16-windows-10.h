@@ -1,7 +1,7 @@
 /**
  * Base16 Windows 10 
  *
- * @author Fergus Collins (https://github.com/C-Fergus)
+ * @author Fergus Collins (https://github.com/ferguscollins)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Windows 10 scheme.
  *
- * @author Fergus Collins (https://github.com/C-Fergus)
+ * @author Fergus Collins (https://github.com/ferguscollins)
  */
 extern const base16_scheme base16_windows_10;
 

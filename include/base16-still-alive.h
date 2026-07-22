@@ -1,7 +1,7 @@
 /**
  * Base16 Still Alive 
  *
- * @author Derrick McKee (derrick.mckee@gmail.com)
+ * @author Derrick McKee (derrick.mckee@gmail.com), Tinted Theming (https://github.com/tinted-theming)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Still Alive scheme.
  *
- * @author Derrick McKee (derrick.mckee@gmail.com)
+ * @author Derrick McKee (derrick.mckee@gmail.com), Tinted Theming (https://github.com/tinted-theming)
  */
 extern const base16_scheme base16_still_alive;
 
@@ -77,31 +77,31 @@ const base16_scheme base16_still_alive = {
     .name = "Still Alive",
     .base = {
         { .r = 240, .g = 240, .b = 240 },
+        { .r = 214, .g = 214, .b = 214 },
+        { .r = 189, .g = 189, .b = 189 },
+        { .r = 163, .g = 163, .b = 163 },
+        { .r = 96, .g = 87, .b = 88 },
+        { .r = 76, .g = 56, .b = 59 },
+        { .r = 51, .g = 31, .b = 33 },
+        { .r = 20, .g = 12, .b = 13 },
+        { .r = 216, .g = 0, .b = 0 },
         { .r = 240, .g = 216, .b = 72 },
         { .r = 255, .g = 240, .b = 24 },
-        { .r = 240, .g = 24, .b = 24 },
-        { .r = 240, .g = 0, .b = 0 },
-        { .r = 216, .g = 0, .b = 0 },
-        { .r = 72, .g = 144, .b = 0 },
         { .r = 48, .g = 168, .b = 96 },
-        { .r = 72, .g = 120, .b = 48 },
-        { .r = 24, .g = 48, .b = 72 },
-        { .r = 66, .g = 99, .b = 149 },
-        { .r = 92, .g = 92, .b = 106 },
-        { .r = 44, .g = 60, .b = 87 },
-        { .r = 0, .g = 24, .b = 120 },
-        { .r = 144, .g = 0, .b = 0 },
+        { .r = 54, .g = 211, .b = 255 },
+        { .r = 54, .g = 94, .b = 255 },
+        { .r = 144, .g = 54, .b = 255 },
         { .r = 20, .g = 12, .b = 13 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
         { .r = 240, .g = 240, .b = 240 },
         { .r = 240, .g = 240, .b = 240 },
-        { .r = 72, .g = 120, .b = 48 },
-        { .r = 66, .g = 99, .b = 149 },
-        { .r = 92, .g = 92, .b = 106 },
-        { .r = 44, .g = 60, .b = 87 },
-        { .r = 0, .g = 24, .b = 120 },
-        { .r = 144, .g = 0, .b = 0 }
+        { .r = 216, .g = 0, .b = 0 },
+        { .r = 255, .g = 240, .b = 24 },
+        { .r = 48, .g = 168, .b = 96 },
+        { .r = 54, .g = 211, .b = 255 },
+        { .r = 54, .g = 94, .b = 255 },
+        { .r = 144, .g = 54, .b = 255 }
     },
     .system = 16
 };

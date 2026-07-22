@@ -51,14 +51,14 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
 #endif  /* BASE16_SCHEME_H__ */
 
-#ifndef BASE16_brogrammer_H__
-#define BASE16_brogrammer_H__
+#ifndef BASE24_brogrammer_H__
+#define BASE24_brogrammer_H__
 
 /**
  * The Base24 Brogrammer scheme.
@@ -67,7 +67,7 @@ typedef struct base16_scheme {
  */
 extern const base16_scheme base24_brogrammer;
 
-#endif  /* BASE16_brogrammer_H__ */
+#endif  /* BASE24_brogrammer_H__ */
 
 #if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
 #ifndef BASE24_brogrammer_IMPLEMENTATION_ONCE

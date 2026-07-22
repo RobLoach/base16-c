@@ -1,7 +1,7 @@
 /**
  * Base16 PaperColor Dark 
  *
- * @author Jon Leopard (http://github.com/jonleopard), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
+ * @author Jon Leopard (http://github.com/jonleopard), Tinted Theming (https://github.com/tinted-theming), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 PaperColor Dark scheme.
  *
- * @author Jon Leopard (http://github.com/jonleopard), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
+ * @author Jon Leopard (http://github.com/jonleopard), Tinted Theming (https://github.com/tinted-theming), based on PaperColor Theme (https://github.com/NLKNguyen/papercolor-theme)
  */
 extern const base16_scheme base16_papercolor_dark;
 
@@ -77,31 +77,31 @@ const base16_scheme base16_papercolor_dark = {
     .name = "PaperColor Dark",
     .base = {
         { .r = 28, .g = 28, .b = 28 },
-        { .r = 175, .g = 0, .b = 95 },
-        { .r = 95, .g = 175, .b = 0 },
-        { .r = 215, .g = 175, .b = 95 },
-        { .r = 95, .g = 175, .b = 215 },
-        { .r = 128, .g = 128, .b = 128 },
-        { .r = 215, .g = 135, .b = 95 },
-        { .r = 208, .g = 208, .b = 208 },
+        { .r = 54, .g = 54, .b = 54 },
+        { .r = 66, .g = 66, .b = 66 },
         { .r = 88, .g = 88, .b = 88 },
-        { .r = 95, .g = 175, .b = 95 },
-        { .r = 175, .g = 215, .b = 0 },
-        { .r = 175, .g = 135, .b = 215 },
-        { .r = 255, .g = 175, .b = 0 },
+        { .r = 128, .g = 128, .b = 128 },
+        { .r = 158, .g = 158, .b = 158 },
+        { .r = 184, .g = 184, .b = 184 },
+        { .r = 208, .g = 208, .b = 208 },
         { .r = 255, .g = 95, .b = 175 },
+        { .r = 215, .g = 175, .b = 95 },
+        { .r = 255, .g = 175, .b = 0 },
+        { .r = 95, .g = 175, .b = 95 },
         { .r = 0, .g = 175, .b = 175 },
-        { .r = 95, .g = 135, .b = 135 },
+        { .r = 95, .g = 175, .b = 215 },
+        { .r = 175, .g = 135, .b = 215 },
+        { .r = 175, .g = 0, .b = 95 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
         { .r = 28, .g = 28, .b = 28 },
         { .r = 28, .g = 28, .b = 28 },
-        { .r = 88, .g = 88, .b = 88 },
-        { .r = 175, .g = 215, .b = 0 },
-        { .r = 175, .g = 135, .b = 215 },
-        { .r = 255, .g = 175, .b = 0 },
         { .r = 255, .g = 95, .b = 175 },
-        { .r = 0, .g = 175, .b = 175 }
+        { .r = 255, .g = 175, .b = 0 },
+        { .r = 95, .g = 175, .b = 95 },
+        { .r = 0, .g = 175, .b = 175 },
+        { .r = 95, .g = 175, .b = 215 },
+        { .r = 175, .g = 135, .b = 215 }
     },
     .system = 16
 };

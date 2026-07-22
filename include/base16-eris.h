@@ -1,7 +1,7 @@
 /**
  * Base16 eris 
  *
- * @author ed (https://codeberg.org/ed)
+ * @author ed (https://codeberg.org/ed), Tinted Theming (https://github.com/tinted-theming)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 eris scheme.
  *
- * @author ed (https://codeberg.org/ed)
+ * @author ed (https://codeberg.org/ed), Tinted Theming (https://github.com/tinted-theming)
  */
 extern const base16_scheme base16_eris;
 
@@ -85,23 +85,23 @@ const base16_scheme base16_eris = {
         { .r = 121, .g = 134, .b = 197 },
         { .r = 154, .g = 170, .b = 229 },
         { .r = 247, .g = 104, .b = 163 },
-        { .r = 247, .g = 104, .b = 163 },
-        { .r = 250, .g = 174, .b = 162 },
-        { .r = 250, .g = 174, .b = 162 },
+        { .r = 247, .g = 137, .b = 104 },
+        { .r = 247, .g = 214, .b = 104 },
+        { .r = 162, .g = 250, .b = 168 },
+        { .r = 162, .g = 250, .b = 240 },
         { .r = 37, .g = 143, .b = 196 },
-        { .r = 37, .g = 143, .b = 196 },
-        { .r = 247, .g = 104, .b = 163 },
-        { .r = 247, .g = 104, .b = 163 },
+        { .r = 195, .g = 104, .b = 247 },
+        { .r = 184, .g = 86, .b = 0 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
         { .r = 10, .g = 9, .b = 32 },
         { .r = 10, .g = 9, .b = 32 },
         { .r = 247, .g = 104, .b = 163 },
-        { .r = 250, .g = 174, .b = 162 },
-        { .r = 250, .g = 174, .b = 162 },
+        { .r = 247, .g = 214, .b = 104 },
+        { .r = 162, .g = 250, .b = 168 },
+        { .r = 162, .g = 250, .b = 240 },
         { .r = 37, .g = 143, .b = 196 },
-        { .r = 37, .g = 143, .b = 196 },
-        { .r = 247, .g = 104, .b = 163 }
+        { .r = 195, .g = 104, .b = 247 }
     },
     .system = 16
 };

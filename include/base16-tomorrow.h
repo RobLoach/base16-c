@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -78,10 +78,10 @@ const base16_scheme base16_tomorrow = {
     .base = {
         { .r = 255, .g = 255, .b = 255 },
         { .r = 224, .g = 224, .b = 224 },
-        { .r = 214, .g = 214, .b = 214 },
-        { .r = 142, .g = 144, .b = 140 },
+        { .r = 197, .g = 200, .b = 198 },
+        { .r = 180, .g = 183, .b = 180 },
         { .r = 150, .g = 152, .b = 150 },
-        { .r = 77, .g = 77, .b = 76 },
+        { .r = 55, .g = 59, .b = 65 },
         { .r = 40, .g = 42, .b = 46 },
         { .r = 29, .g = 31, .b = 33 },
         { .r = 200, .g = 40, .b = 41 },

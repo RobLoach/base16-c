@@ -1,7 +1,7 @@
 /**
  * Base16 Oxocarbon Light 
  *
- * @author shaunsingh/IBM
+ * @author shaunsingh/IBM, Tinted Theming (https://github.com/tinted-theming)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Oxocarbon Light scheme.
  *
- * @author shaunsingh/IBM
+ * @author shaunsingh/IBM, Tinted Theming (https://github.com/tinted-theming)
  */
 extern const base16_scheme base16_oxocarbon_light;
 
@@ -78,29 +78,29 @@ const base16_scheme base16_oxocarbon_light = {
     .base = {
         { .r = 242, .g = 244, .b = 248 },
         { .r = 221, .g = 225, .b = 230 },
-        { .r = 82, .g = 82, .b = 82 },
-        { .r = 22, .g = 22, .b = 22 },
-        { .r = 38, .g = 38, .b = 38 },
-        { .r = 57, .g = 57, .b = 57 },
-        { .r = 82, .g = 82, .b = 82 },
-        { .r = 8, .g = 189, .b = 186 },
+        { .r = 190, .g = 198, .b = 207 },
+        { .r = 161, .g = 172, .b = 186 },
+        { .r = 104, .g = 120, .b = 141 },
+        { .r = 82, .g = 95, .b = 112 },
+        { .r = 61, .g = 70, .b = 82 },
+        { .r = 39, .g = 45, .b = 53 },
         { .r = 255, .g = 126, .b = 182 },
         { .r = 238, .g = 83, .b = 150 },
         { .r = 255, .g = 111, .b = 0 },
-        { .r = 15, .g = 98, .b = 254 },
-        { .r = 103, .g = 58, .b = 183 },
         { .r = 66, .g = 190, .b = 101 },
+        { .r = 103, .g = 58, .b = 183 },
+        { .r = 15, .g = 98, .b = 254 },
         { .r = 190, .g = 149, .b = 255 },
-        { .r = 55, .g = 71, .b = 79 },
+        { .r = 128, .g = 56, .b = 0 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
         { .r = 242, .g = 244, .b = 248 },
         { .r = 242, .g = 244, .b = 248 },
         { .r = 255, .g = 126, .b = 182 },
         { .r = 255, .g = 111, .b = 0 },
-        { .r = 15, .g = 98, .b = 254 },
-        { .r = 103, .g = 58, .b = 183 },
         { .r = 66, .g = 190, .b = 101 },
+        { .r = 103, .g = 58, .b = 183 },
+        { .r = 15, .g = 98, .b = 254 },
         { .r = 190, .g = 149, .b = 255 }
     },
     .system = 16

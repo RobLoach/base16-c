@@ -1,7 +1,7 @@
 /**
  * Base16 Edge Dark 
  *
- * @author cjayross (https://github.com/cjayross)
+ * @author cjayross (https://github.com/cjayross), Tinted Theming (https://github.com/tinted-theming)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Edge Dark scheme.
  *
- * @author cjayross (https://github.com/cjayross)
+ * @author cjayross (https://github.com/cjayross), Tinted Theming (https://github.com/tinted-theming)
  */
 extern const base16_scheme base16_edge_dark;
 
@@ -77,15 +77,15 @@ const base16_scheme base16_edge_dark = {
     .name = "Edge Dark",
     .base = {
         { .r = 38, .g = 39, .b = 41 },
-        { .r = 136, .g = 144, .b = 159 },
-        { .r = 183, .g = 190, .b = 201 },
-        { .r = 62, .g = 66, .b = 73 },
-        { .r = 115, .g = 179, .b = 231 },
-        { .r = 183, .g = 190, .b = 201 },
-        { .r = 211, .g = 144, .b = 231 },
-        { .r = 62, .g = 66, .b = 73 },
+        { .r = 49, .g = 50, .b = 53 },
+        { .r = 61, .g = 63, .b = 66 },
+        { .r = 74, .g = 76, .b = 79 },
+        { .r = 149, .g = 152, .b = 157 },
+        { .r = 175, .g = 178, .b = 181 },
+        { .r = 202, .g = 204, .b = 206 },
+        { .r = 228, .g = 229, .b = 230 },
         { .r = 231, .g = 113, .b = 113 },
-        { .r = 231, .g = 113, .b = 113 },
+        { .r = 235, .g = 163, .b = 26 },
         { .r = 219, .g = 183, .b = 116 },
         { .r = 161, .g = 191, .b = 120 },
         { .r = 94, .g = 186, .b = 165 },

@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -79,8 +79,8 @@ const base16_scheme base16_mountain = {
         { .r = 15, .g = 15, .b = 15 },
         { .r = 25, .g = 25, .b = 25 },
         { .r = 38, .g = 38, .b = 38 },
+        { .r = 57, .g = 57, .b = 57 },
         { .r = 76, .g = 76, .b = 76 },
-        { .r = 172, .g = 138, .b = 140 },
         { .r = 202, .g = 202, .b = 202 },
         { .r = 231, .g = 231, .b = 231 },
         { .r = 240, .g = 240, .b = 240 },

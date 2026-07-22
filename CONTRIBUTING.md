@@ -4,7 +4,7 @@
 
 ### Dependencies
 
-- `>=0.9.3` [tinted-builder-rust]
+- `>=0.21.0` [tinted-builder-rust]
 
 ### Usage for template editing
 
@@ -13,13 +13,9 @@
     ```
     tinted-builder-rust sync
     ```
-1. Clone [base16-h](https://github.com/robloach/base16-h)
+1. Run `tinted-builder-rust` on this repository
     ```sh
-    git clone https://github.com/RobLoach/base16-h.git
-    ```
-1. Run `tinted-builder-rust` on the directory
-    ```sh
-    tinted-builder-rust build base16-h
+    tinted-builder-rust build .
     ```
 
 If you have more questions about [tinted-builder-rust], have a look at

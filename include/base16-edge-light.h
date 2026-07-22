@@ -1,7 +1,7 @@
 /**
  * Base16 Edge Light 
  *
- * @author cjayross (https://github.com/cjayross)
+ * @author cjayross (https://github.com/cjayross), Tinted Theming (https://github.com/tinted-theming)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -63,7 +63,7 @@ typedef struct base16_scheme {
 /**
  * The Base16 Edge Light scheme.
  *
- * @author cjayross (https://github.com/cjayross)
+ * @author cjayross (https://github.com/cjayross), Tinted Theming (https://github.com/tinted-theming)
  */
 extern const base16_scheme base16_edge_light;
 
@@ -77,16 +77,16 @@ const base16_scheme base16_edge_light = {
     .name = "Edge Light",
     .base = {
         { .r = 250, .g = 250, .b = 250 },
-        { .r = 124, .g = 159, .b = 75 },
-        { .r = 214, .g = 152, .b = 34 },
+        { .r = 227, .g = 229, .b = 232 },
+        { .r = 172, .g = 177, .b = 185 },
+        { .r = 145, .g = 151, .b = 161 },
         { .r = 94, .g = 100, .b = 111 },
-        { .r = 101, .g = 135, .b = 191 },
-        { .r = 94, .g = 100, .b = 111 },
-        { .r = 184, .g = 112, .b = 206 },
-        { .r = 94, .g = 100, .b = 111 },
+        { .r = 71, .g = 71, .b = 82 },
+        { .r = 58, .g = 58, .b = 70 },
+        { .r = 46, .g = 46, .b = 56 },
         { .r = 219, .g = 112, .b = 112 },
-        { .r = 219, .g = 112, .b = 112 },
-        { .r = 214, .g = 152, .b = 34 },
+        { .r = 235, .g = 163, .b = 26 },
+        { .r = 235, .g = 204, .b = 26 },
         { .r = 124, .g = 159, .b = 75 },
         { .r = 80, .g = 156, .b = 147 },
         { .r = 101, .g = 135, .b = 191 },
@@ -97,7 +97,7 @@ const base16_scheme base16_edge_light = {
         { .r = 250, .g = 250, .b = 250 },
         { .r = 250, .g = 250, .b = 250 },
         { .r = 219, .g = 112, .b = 112 },
-        { .r = 214, .g = 152, .b = 34 },
+        { .r = 235, .g = 204, .b = 26 },
         { .r = 124, .g = 159, .b = 75 },
         { .r = 80, .g = 156, .b = 147 },
         { .r = 101, .g = 135, .b = 191 },

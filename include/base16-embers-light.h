@@ -51,7 +51,7 @@ typedef struct base16_color {
  */
 typedef struct base16_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the base16 colors for the scheme. */
+    base16_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
 } base16_scheme;
 
@@ -76,32 +76,32 @@ extern const base16_scheme base16_embers_light;
 const base16_scheme base16_embers_light = {
     .name = "Embers Light",
     .base = {
-        { .r = 209, .g = 214, .b = 219 },
-        { .r = 174, .g = 182, .b = 190 },
-        { .r = 144, .g = 154, .b = 163 },
-        { .r = 117, .g = 128, .b = 138 },
-        { .r = 71, .g = 80, .b = 90 },
-        { .r = 50, .g = 59, .b = 67 },
-        { .r = 32, .g = 38, .b = 44 },
-        { .r = 15, .g = 19, .b = 22 },
-        { .r = 87, .g = 109, .b = 130 },
-        { .r = 87, .g = 130, .b = 130 },
-        { .r = 87, .g = 130, .b = 109 },
-        { .r = 109, .g = 130, .b = 87 },
+        { .r = 219, .g = 214, .b = 209 },
+        { .r = 190, .g = 182, .b = 174 },
+        { .r = 163, .g = 154, .b = 144 },
+        { .r = 138, .g = 128, .b = 117 },
+        { .r = 90, .g = 80, .b = 71 },
+        { .r = 67, .g = 59, .b = 50 },
+        { .r = 44, .g = 38, .b = 32 },
+        { .r = 22, .g = 19, .b = 15 },
         { .r = 130, .g = 109, .b = 87 },
-        { .r = 130, .g = 87, .b = 109 },
+        { .r = 130, .g = 130, .b = 87 },
+        { .r = 109, .g = 130, .b = 87 },
+        { .r = 87, .g = 130, .b = 109 },
+        { .r = 87, .g = 109, .b = 130 },
         { .r = 109, .g = 87, .b = 130 },
-        { .r = 87, .g = 87, .b = 130 },
+        { .r = 130, .g = 87, .b = 109 },
+        { .r = 130, .g = 87, .b = 87 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
-        { .r = 209, .g = 214, .b = 219 },
-        { .r = 209, .g = 214, .b = 219 },
-        { .r = 87, .g = 109, .b = 130 },
-        { .r = 87, .g = 130, .b = 109 },
-        { .r = 109, .g = 130, .b = 87 },
+        { .r = 219, .g = 214, .b = 209 },
+        { .r = 219, .g = 214, .b = 209 },
         { .r = 130, .g = 109, .b = 87 },
-        { .r = 130, .g = 87, .b = 109 },
-        { .r = 109, .g = 87, .b = 130 }
+        { .r = 109, .g = 130, .b = 87 },
+        { .r = 87, .g = 130, .b = 109 },
+        { .r = 87, .g = 109, .b = 130 },
+        { .r = 109, .g = 87, .b = 130 },
+        { .r = 130, .g = 87, .b = 109 }
     },
     .system = 16
 };
