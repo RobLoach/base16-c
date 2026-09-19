@@ -34,4 +34,48 @@
 #include "{{system}}-{{slug}}.h" /* {{variant}} */
 {{/schemes}}
 
+/**
+ * The total number of schemes available in tinted_schemes.
+ */
+enum {
+    TINTED_COUNT = 0
+{{#schemes}}
+    + 1
+{{/schemes}}
+};
+
+/**
+ * Pointers to every available scheme, in the same order as the includes above.
+ *
+ * @code
+ * int i;
+ * for (i = 0; i < TINTED_COUNT; i++) {
+ *     const tinted_scheme* scheme = tinted_schemes[i];
+ *     printf("%s\n", scheme->name);
+ * }
+ * @endcode
+ */
+extern const tinted_scheme* const tinted_schemes[TINTED_COUNT];
+
 #endif /* TINTED_C_H__ */
+
+#if (defined(TINTED_IMPLEMENTATION) || defined(BASE16_IMPLEMENTATION)) && !defined(TINTED_HEADER_ONLY)
+#ifndef TINTED_LIST_IMPLEMENTATION_ONCE
+#define TINTED_LIST_IMPLEMENTATION_ONCE
+
+/*
+ * Each scheme header ends with a section guarded by TINTED_SCHEMES_ARRAY_ENTRY
+ * that expands to "&<system>_<slug>," and nothing else. Re-including the
+ * headers here therefore fills the array; every other part of the headers is
+ * skipped by their include guards.
+ */
+const tinted_scheme* const tinted_schemes[TINTED_COUNT] = {
+#define TINTED_SCHEMES_ARRAY_ENTRY
+{{#schemes}}
+#include "{{system}}-{{slug}}.h"
+{{/schemes}}
+#undef TINTED_SCHEMES_ARRAY_ENTRY
+};
+
+#endif /* TINTED_LIST_IMPLEMENTATION_ONCE */
+#endif /* TINTED_IMPLEMENTATION */

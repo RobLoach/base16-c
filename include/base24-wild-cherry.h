@@ -108,3 +108,8 @@ const tinted_scheme base24_wild_cherry = {
 
 #endif  /* BASE24_wild_cherry_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base24_wild_cherry,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

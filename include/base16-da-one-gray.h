@@ -108,3 +108,8 @@ const tinted_scheme base16_da_one_gray = {
 
 #endif  /* BASE16_da_one_gray_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base16_da_one_gray,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

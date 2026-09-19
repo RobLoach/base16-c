@@ -112,3 +112,8 @@ const tinted_scheme base16_ascendancy = {
 
 #endif  /* BASE16_ascendancy_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base16_ascendancy,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

@@ -108,3 +108,8 @@ const tinted_scheme base16_emil = {
 
 #endif  /* BASE16_emil_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base16_emil,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

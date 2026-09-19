@@ -108,3 +108,8 @@ const tinted_scheme base16_black_metal_mayhem = {
 
 #endif  /* BASE16_black_metal_mayhem_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base16_black_metal_mayhem,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

@@ -108,3 +108,8 @@ const tinted_scheme base24_toy_chest = {
 
 #endif  /* BASE24_toy_chest_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base24_toy_chest,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

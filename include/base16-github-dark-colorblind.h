@@ -108,3 +108,8 @@ const tinted_scheme base16_github_dark_colorblind = {
 
 #endif  /* BASE16_github_dark_colorblind_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base16_github_dark_colorblind,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

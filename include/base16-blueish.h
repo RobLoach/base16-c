@@ -108,3 +108,8 @@ const tinted_scheme base16_blueish = {
 
 #endif  /* BASE16_blueish_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base16_blueish,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

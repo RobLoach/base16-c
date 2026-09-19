@@ -10,6 +10,8 @@
 #include "tinted.h"
 
 int main() {
+    int i;
+
     printf("Name: %s\n", base16_tomorrow.name);
     assert(base16_tomorrow.base[0].r == 255);
     assert(base16_tomorrow.base[0].g == 255);
@@ -29,6 +31,15 @@ int main() {
     printf("Name: %s\n", base16_dracula.name);
     assert(base16_dracula.system == 16);
     assert(base24_dracula.system == 24);
+
+    /* Iterate through every available scheme. */
+    assert(TINTED_COUNT > 500);
+    for (i = 0; i < TINTED_COUNT; i++) {
+        assert(tinted_schemes[i] != NULL);
+        assert(tinted_schemes[i]->name != NULL);
+        assert(tinted_schemes[i]->system == 16 || tinted_schemes[i]->system == 24);
+    }
+    printf("Schemes: %d\n", TINTED_COUNT);
 
     return 0;
 }

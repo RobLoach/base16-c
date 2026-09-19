@@ -108,3 +108,8 @@ const tinted_scheme base24_medallion = {
 
 #endif  /* BASE24_medallion_IMPLEMENTATION_ONCE */
 #endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base24_medallion,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

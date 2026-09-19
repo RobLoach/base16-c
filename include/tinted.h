@@ -568,4 +568,1116 @@
 #include "base24-wryan.h" /* dark */
 #include "base24-zenburn.h" /* dark */
 
+/**
+ * The total number of schemes available in tinted_schemes.
+ */
+enum {
+    TINTED_COUNT = 0
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+    + 1
+};
+
+/**
+ * Pointers to every available scheme, in the same order as the includes above.
+ *
+ * @code
+ * int i;
+ * for (i = 0; i < TINTED_COUNT; i++) {
+ *     const tinted_scheme* scheme = tinted_schemes[i];
+ *     printf("%s\n", scheme->name);
+ * }
+ * @endcode
+ */
+extern const tinted_scheme* const tinted_schemes[TINTED_COUNT];
+
 #endif /* TINTED_C_H__ */
+
+#if (defined(TINTED_IMPLEMENTATION) || defined(BASE16_IMPLEMENTATION)) && !defined(TINTED_HEADER_ONLY)
+#ifndef TINTED_LIST_IMPLEMENTATION_ONCE
+#define TINTED_LIST_IMPLEMENTATION_ONCE
+
+/*
+ * Each scheme header ends with a section guarded by TINTED_SCHEMES_ARRAY_ENTRY
+ * that expands to "&<system>_<slug>," and nothing else. Re-including the
+ * headers here therefore fills the array; every other part of the headers is
+ * skipped by their include guards.
+ */
+const tinted_scheme* const tinted_schemes[TINTED_COUNT] = {
+#define TINTED_SCHEMES_ARRAY_ENTRY
+#include "base16-0x96f.h"
+#include "base16-3024.h"
+#include "base16-apathy.h"
+#include "base16-apprentice.h"
+#include "base16-arroz-con-dulce-dark.h"
+#include "base16-arroz-con-dulce.h"
+#include "base16-ascendancy.h"
+#include "base16-ashes.h"
+#include "base16-atelier-cave-light.h"
+#include "base16-atelier-cave.h"
+#include "base16-atelier-dune-light.h"
+#include "base16-atelier-dune.h"
+#include "base16-atelier-estuary-light.h"
+#include "base16-atelier-estuary.h"
+#include "base16-atelier-forest-light.h"
+#include "base16-atelier-forest.h"
+#include "base16-atelier-heath-light.h"
+#include "base16-atelier-heath.h"
+#include "base16-atelier-lakeside-light.h"
+#include "base16-atelier-lakeside.h"
+#include "base16-atelier-plateau-light.h"
+#include "base16-atelier-plateau.h"
+#include "base16-atelier-savanna-light.h"
+#include "base16-atelier-savanna.h"
+#include "base16-atelier-seaside-light.h"
+#include "base16-atelier-seaside.h"
+#include "base16-atelier-sulphurpool-light.h"
+#include "base16-atelier-sulphurpool.h"
+#include "base16-atlas.h"
+#include "base16-ayu-dark.h"
+#include "base16-ayu-light.h"
+#include "base16-ayu-mirage.h"
+#include "base16-aztec.h"
+#include "base16-bespin.h"
+#include "base16-black-metal-bathory.h"
+#include "base16-black-metal-burzum.h"
+#include "base16-black-metal-dark-funeral.h"
+#include "base16-black-metal-gorgoroth.h"
+#include "base16-black-metal-immortal.h"
+#include "base16-black-metal-khold.h"
+#include "base16-black-metal-marduk.h"
+#include "base16-black-metal-mayhem.h"
+#include "base16-black-metal-nile.h"
+#include "base16-black-metal-venom.h"
+#include "base16-black-metal.h"
+#include "base16-blueforest.h"
+#include "base16-blueish.h"
+#include "base16-boo-shnickle.h"
+#include "base16-boo-shnickle-light.h"
+#include "base16-bosque.h"
+#include "base16-brasa.h"
+#include "base16-brewer.h"
+#include "base16-bright.h"
+#include "base16-brogrammer.h"
+#include "base16-brushtrees-dark.h"
+#include "base16-brushtrees.h"
+#include "base16-cacao.h"
+#include "base16-caroline.h"
+#include "base16-catppuccin-frappe.h"
+#include "base16-catppuccin-latte.h"
+#include "base16-catppuccin-macchiato.h"
+#include "base16-catppuccin-mocha.h"
+#include "base16-cerulean-signal-dark.h"
+#include "base16-cerulean-signal-light.h"
+#include "base16-chalk.h"
+#include "base16-charcoal-dark.h"
+#include "base16-charcoal-light.h"
+#include "base16-chicago-day.h"
+#include "base16-chicago-night.h"
+#include "base16-chinoiserie-midnight.h"
+#include "base16-chinoiserie-morandi.h"
+#include "base16-chinoiserie-night.h"
+#include "base16-chinoiserie.h"
+#include "base16-circus.h"
+#include "base16-classic-dark.h"
+#include "base16-classic-light.h"
+#include "base16-codeschool.h"
+#include "base16-colors.h"
+#include "base16-corduroy-dark.h"
+#include "base16-corduroy.h"
+#include "base16-cupcake.h"
+#include "base16-cupertino.h"
+#include "base16-cyberpunk.h"
+#include "base16-da-one-black.h"
+#include "base16-da-one-gray.h"
+#include "base16-da-one-ocean.h"
+#include "base16-da-one-paper.h"
+#include "base16-da-one-sea.h"
+#include "base16-da-one-white.h"
+#include "base16-danqing-light.h"
+#include "base16-danqing.h"
+#include "base16-darcula.h"
+#include "base16-darkmoss.h"
+#include "base16-darktooth.h"
+#include "base16-darkviolet.h"
+#include "base16-decaf.h"
+#include "base16-deep-oceanic-next.h"
+#include "base16-default-dark.h"
+#include "base16-default-light.h"
+#include "base16-digital-rain.h"
+#include "base16-dirtysea.h"
+#include "base16-dracula.h"
+#include "base16-edge-dark.h"
+#include "base16-edge-light.h"
+#include "base16-eighties.h"
+#include "base16-eldritch.h"
+#include "base16-embers-light.h"
+#include "base16-embers.h"
+#include "base16-emil.h"
+#include "base16-equilibrium-dark.h"
+#include "base16-equilibrium-gray-dark.h"
+#include "base16-equilibrium-gray-light.h"
+#include "base16-equilibrium-light.h"
+#include "base16-eris.h"
+#include "base16-espresso.h"
+#include "base16-eva-dim.h"
+#include "base16-eva.h"
+#include "base16-evenok-dark.h"
+#include "base16-everforest-dark-hard.h"
+#include "base16-everforest-dark-medium.h"
+#include "base16-everforest-dark-soft.h"
+#include "base16-everforest-light-hard.h"
+#include "base16-everforest-light-medium.h"
+#include "base16-everforest-light-soft.h"
+#include "base16-everforest.h"
+#include "base16-flat.h"
+#include "base16-flexoki-dark.h"
+#include "base16-flexoki-light.h"
+#include "base16-framer.h"
+#include "base16-fruit-soda.h"
+#include "base16-gigavolt.h"
+#include "base16-github-dark-colorblind.h"
+#include "base16-github-dark-dimmed.h"
+#include "base16-github-dark-high-contrast.h"
+#include "base16-github-dark.h"
+#include "base16-github-light-colorblind.h"
+#include "base16-github-light-high-contrast.h"
+#include "base16-github.h"
+#include "base16-google-dark.h"
+#include "base16-google-light.h"
+#include "base16-gotham.h"
+#include "base16-grayscale-dark.h"
+#include "base16-grayscale-light.h"
+#include "base16-greenscreen.h"
+#include "base16-gruber.h"
+#include "base16-gruvbox-dark-hard.h"
+#include "base16-gruvbox-dark-medium-forest.h"
+#include "base16-gruvbox-dark-medium.h"
+#include "base16-gruvbox-dark-pale.h"
+#include "base16-gruvbox-dark-soft.h"
+#include "base16-gruvbox-dark.h"
+#include "base16-gruvbox-light-hard.h"
+#include "base16-gruvbox-light-medium.h"
+#include "base16-gruvbox-light-soft.h"
+#include "base16-gruvbox-light.h"
+#include "base16-gruvbox-material-dark-hard.h"
+#include "base16-gruvbox-material-dark-medium.h"
+#include "base16-gruvbox-material-dark-soft.h"
+#include "base16-gruvbox-material-light-hard.h"
+#include "base16-gruvbox-material-light-medium.h"
+#include "base16-gruvbox-material-light-soft.h"
+#include "base16-hardcore.h"
+#include "base16-hardhacker.h"
+#include "base16-harmonic16-dark.h"
+#include "base16-harmonic16-light.h"
+#include "base16-heetch-light.h"
+#include "base16-heetch.h"
+#include "base16-helios.h"
+#include "base16-hopscotch.h"
+#include "base16-horizon-dark.h"
+#include "base16-horizon-light.h"
+#include "base16-horizon-terminal-dark.h"
+#include "base16-horizon-terminal-light.h"
+#include "base16-humanoid-dark.h"
+#include "base16-humanoid-light.h"
+#include "base16-ia-dark.h"
+#include "base16-ia-light.h"
+#include "base16-icy.h"
+#include "base16-irblack.h"
+#include "base16-isotope.h"
+#include "base16-jabuti.h"
+#include "base16-jellybeans.h"
+#include "base16-kanagawa-dragon.h"
+#include "base16-kanagawa.h"
+#include "base16-katy.h"
+#include "base16-kimber.h"
+#include "base16-kissa-latte.h"
+#include "base16-kissa-macchiato.h"
+#include "base16-lichen-chartreuse-dark.h"
+#include "base16-lichen-chartreuse-light.h"
+#include "base16-lime.h"
+#include "base16-linux-vt.h"
+#include "base16-macintosh.h"
+#include "base16-marrakesh.h"
+#include "base16-materia.h"
+#include "base16-material-darker.h"
+#include "base16-material-lighter.h"
+#include "base16-material-palenight.h"
+#include "base16-material-vivid.h"
+#include "base16-material.h"
+#include "base16-measured-dark.h"
+#include "base16-measured-light.h"
+#include "base16-mellow-purple.h"
+#include "base16-mexico-light.h"
+#include "base16-mezcal.h"
+#include "base16-mocha.h"
+#include "base16-monokai.h"
+#include "base16-moonlight.h"
+#include "base16-mountain.h"
+#include "base16-nebula.h"
+#include "base16-neovim-dark.h"
+#include "base16-neovim-light.h"
+#include "base16-noche.h"
+#include "base16-nord-light.h"
+#include "base16-nord.h"
+#include "base16-nova.h"
+#include "base16-ocean.h"
+#include "base16-oceanicnext.h"
+#include "base16-ocote.h"
+#include "base16-one-light.h"
+#include "base16-onedark-dark.h"
+#include "base16-onedark.h"
+#include "base16-outrun-dark.h"
+#include "base16-oxocarbon-dark.h"
+#include "base16-oxocarbon-light.h"
+#include "base16-pandora.h"
+#include "base16-papel.h"
+#include "base16-papercolor-dark.h"
+#include "base16-papercolor-light.h"
+#include "base16-paraiso.h"
+#include "base16-pasque.h"
+#include "base16-pastelon-de-amarillos-dark.h"
+#include "base16-pastelon-de-amarillos.h"
+#include "base16-penumbra-dark-contrast-plus-plus.h"
+#include "base16-penumbra-dark-contrast-plus.h"
+#include "base16-penumbra-dark.h"
+#include "base16-penumbra-light-contrast-plus-plus.h"
+#include "base16-penumbra-light-contrast-plus.h"
+#include "base16-penumbra-light.h"
+#include "base16-phd.h"
+#include "base16-pico.h"
+#include "base16-pinky.h"
+#include "base16-pop.h"
+#include "base16-porple.h"
+#include "base16-precious-dark-eleven.h"
+#include "base16-precious-dark-fifteen.h"
+#include "base16-precious-light-warm.h"
+#include "base16-precious-light-white.h"
+#include "base16-primer-dark-dimmed.h"
+#include "base16-primer-dark.h"
+#include "base16-primer-light.h"
+#include "base16-purpledream.h"
+#include "base16-qualia.h"
+#include "base16-railscasts.h"
+#include "base16-rebecca.h"
+#include "base16-rose-pine-dawn.h"
+#include "base16-rose-pine-moon.h"
+#include "base16-rose-pine.h"
+#include "base16-saga.h"
+#include "base16-sagelight.h"
+#include "base16-sakura.h"
+#include "base16-sandcastle.h"
+#include "base16-selenized-black.h"
+#include "base16-selenized-dark.h"
+#include "base16-selenized-light.h"
+#include "base16-selenized-white.h"
+#include "base16-seti.h"
+#include "base16-shades-of-purple.h"
+#include "base16-shadesmear-dark.h"
+#include "base16-shadesmear-light.h"
+#include "base16-shapeshifter.h"
+#include "base16-silk-dark.h"
+#include "base16-silk-light.h"
+#include "base16-snazzy.h"
+#include "base16-soft-server.h"
+#include "base16-solarflare-light.h"
+#include "base16-solarflare.h"
+#include "base16-solarized-dark.h"
+#include "base16-solarized-light.h"
+#include "base16-spaceduck.h"
+#include "base16-spacemacs.h"
+#include "base16-sparky.h"
+#include "base16-standardized-dark.h"
+#include "base16-standardized-light.h"
+#include "base16-stella.h"
+#include "base16-still-alive.h"
+#include "base16-summercamp.h"
+#include "base16-summerfruit-dark.h"
+#include "base16-summerfruit-light.h"
+#include "base16-swamp-dark.h"
+#include "base16-swamp-light.h"
+#include "base16-synth-midnight-dark.h"
+#include "base16-synth-midnight-light.h"
+#include "base16-tango.h"
+#include "base16-tarot.h"
+#include "base16-tender.h"
+#include "base16-terracotta-dark.h"
+#include "base16-terracotta.h"
+#include "base16-tinta.h"
+#include "base16-tokyo-city-dark.h"
+#include "base16-tokyo-city-light.h"
+#include "base16-tokyo-city-terminal-dark.h"
+#include "base16-tokyo-city-terminal-light.h"
+#include "base16-tokyo-night-dark.h"
+#include "base16-tokyo-night-light.h"
+#include "base16-tokyo-night-moon.h"
+#include "base16-tokyo-night-storm.h"
+#include "base16-tokyo-night-terminal-dark.h"
+#include "base16-tokyo-night-terminal-light.h"
+#include "base16-tokyo-night-terminal-storm.h"
+#include "base16-tokyodark-terminal.h"
+#include "base16-tokyodark.h"
+#include "base16-tomorrow-night-eighties.h"
+#include "base16-tomorrow-night.h"
+#include "base16-tomorrow.h"
+#include "base16-tube.h"
+#include "base16-twilight.h"
+#include "base16-unikitty-dark.h"
+#include "base16-unikitty-light.h"
+#include "base16-unikitty-reversible.h"
+#include "base16-uwunicorn.h"
+#include "base16-valua.h"
+#include "base16-vesper.h"
+#include "base16-vice.h"
+#include "base16-vulcan.h"
+#include "base16-windows-10-light.h"
+#include "base16-windows-10.h"
+#include "base16-windows-95-light.h"
+#include "base16-windows-95.h"
+#include "base16-windows-highcontrast-light.h"
+#include "base16-windows-highcontrast.h"
+#include "base16-windows-nt-light.h"
+#include "base16-windows-nt.h"
+#include "base16-woodland.h"
+#include "base16-xcode-dusk.h"
+#include "base16-yesterday-bright.h"
+#include "base16-yesterday-night.h"
+#include "base16-yesterday.h"
+#include "base16-zenbones.h"
+#include "base16-zenburn.h"
+#include "base24-0x96f.h"
+#include "base24-3024-day.h"
+#include "base24-3024-night.h"
+#include "base24-adventure-time.h"
+#include "base24-alien-blood.h"
+#include "base24-alucard.h"
+#include "base24-apprentice.h"
+#include "base24-argonaut.h"
+#include "base24-arthur.h"
+#include "base24-atelier-sulphurpool.h"
+#include "base24-ayu-dark.h"
+#include "base24-ayu-light.h"
+#include "base24-ayu-mirage.h"
+#include "base24-banana-blueberry.h"
+#include "base24-batman.h"
+#include "base24-birds-of-paradise.h"
+#include "base24-blazer.h"
+#include "base24-blue-berry-pie.h"
+#include "base24-blue-matrix.h"
+#include "base24-bluloco-dark.h"
+#include "base24-bluloco-light.h"
+#include "base24-borland.h"
+#include "base24-breeze.h"
+#include "base24-broadcast.h"
+#include "base24-brogrammer.h"
+#include "base24-builtin-dark.h"
+#include "base24-builtin-light.h"
+#include "base24-builtin-pastel-dark.h"
+#include "base24-builtin-solarized-dark.h"
+#include "base24-builtin-solarized-light.h"
+#include "base24-builtin-tango-dark.h"
+#include "base24-builtin-tango-light.h"
+#include "base24-catppuccin-frappe.h"
+#include "base24-catppuccin-latte.h"
+#include "base24-catppuccin-macchiato.h"
+#include "base24-catppuccin-mocha.h"
+#include "base24-cerulean-signal-dark.h"
+#include "base24-cerulean-signal-light.h"
+#include "base24-chalk.h"
+#include "base24-chalkboard.h"
+#include "base24-challenger-deep.h"
+#include "base24-ciapre.h"
+#include "base24-clrs.h"
+#include "base24-cobalt-neon.h"
+#include "base24-cobalt2.h"
+#include "base24-crayon-pony-fish.h"
+#include "base24-cyberdyne.h"
+#include "base24-dark-plus.h"
+#include "base24-deep-oceanic-next.h"
+#include "base24-deep.h"
+#include "base24-desert.h"
+#include "base24-dimmed-monokai.h"
+#include "base24-dracula.h"
+#include "base24-earthsong.h"
+#include "base24-eldritch.h"
+#include "base24-elemental.h"
+#include "base24-elementary.h"
+#include "base24-embarcadero.h"
+#include "base24-encom.h"
+#include "base24-espresso-libre.h"
+#include "base24-espresso.h"
+#include "base24-fideloper.h"
+#include "base24-firefox-dev.h"
+#include "base24-fish-tank.h"
+#include "base24-flat.h"
+#include "base24-flatland.h"
+#include "base24-flexoki-dark.h"
+#include "base24-flexoki-light.h"
+#include "base24-floraverse.h"
+#include "base24-forest-blue.h"
+#include "base24-framer.h"
+#include "base24-front-end-delight.h"
+#include "base24-fun-forrest.h"
+#include "base24-galaxy.h"
+#include "base24-github-dark-colorblind.h"
+#include "base24-github-dark-dimmed.h"
+#include "base24-github-dark-high-contrast.h"
+#include "base24-github-dark.h"
+#include "base24-github-light-colorblind.h"
+#include "base24-github-light-high-contrast.h"
+#include "base24-github-light.h"
+#include "base24-grape.h"
+#include "base24-gruvbox-dark.h"
+#include "base24-gruvbox-light.h"
+#include "base24-hacktober.h"
+#include "base24-hardcore.h"
+#include "base24-highway.h"
+#include "base24-hipster-green.h"
+#include "base24-hivacruz.h"
+#include "base24-homebrew.h"
+#include "base24-hopscotch.h"
+#include "base24-hurtado.h"
+#include "base24-hybrid.h"
+#include "base24-ic-green-ppl.h"
+#include "base24-ic-orange-ppl.h"
+#include "base24-idea.h"
+#include "base24-idle-toes.h"
+#include "base24-jackie-brown.h"
+#include "base24-japanesque.h"
+#include "base24-jellybeans.h"
+#include "base24-jet-brains-darcula.h"
+#include "base24-kanagawa-dragon.h"
+#include "base24-kibble.h"
+#include "base24-lab-fox.h"
+#include "base24-laser.h"
+#include "base24-later-this-evening.h"
+#include "base24-lavandula.h"
+#include "base24-lichen-chartreuse-dark.h"
+#include "base24-lichen-chartreuse-light.h"
+#include "base24-lovelace.h"
+#include "base24-man-page.h"
+#include "base24-material-dark.h"
+#include "base24-material.h"
+#include "base24-mathias.h"
+#include "base24-medallion.h"
+#include "base24-mission-brogue.h"
+#include "base24-misterioso.h"
+#include "base24-molokai.h"
+#include "base24-mona-lisa.h"
+#include "base24-monokai-vivid.h"
+#include "base24-mountain.h"
+#include "base24-night-lion-v1.h"
+#include "base24-night-lion-v2.h"
+#include "base24-night-owlish-light.h"
+#include "base24-nocturnal-winter.h"
+#include "base24-obsidian.h"
+#include "base24-ocean.h"
+#include "base24-oceanic-material.h"
+#include "base24-ollie.h"
+#include "base24-one-black.h"
+#include "base24-one-dark.h"
+#include "base24-one-half-light.h"
+#include "base24-one-light.h"
+#include "base24-operator-mono-dark.h"
+#include "base24-pandora.h"
+#include "base24-papercolor-dark.h"
+#include "base24-papercolor-light.h"
+#include "base24-pastelon-de-amarillos-dark.h"
+#include "base24-pastelon-de-amarillos.h"
+#include "base24-paul-millr.h"
+#include "base24-pencil-dark.h"
+#include "base24-pencil-light.h"
+#include "base24-piatto-light.h"
+#include "base24-pnevma.h"
+#include "base24-pro-light.h"
+#include "base24-pro.h"
+#include "base24-purple-rain.h"
+#include "base24-purplepeter.h"
+#include "base24-rebecca.h"
+#include "base24-red-alert.h"
+#include "base24-red-planet.h"
+#include "base24-red-sands.h"
+#include "base24-rippedcasts.h"
+#include "base24-royal.h"
+#include "base24-scarlet-protocol.h"
+#include "base24-sea-shells.h"
+#include "base24-seafoam-pastel.h"
+#include "base24-shades-of-purple.h"
+#include "base24-shaman.h"
+#include "base24-slate.h"
+#include "base24-sleepy-hollow.h"
+#include "base24-smyck.h"
+#include "base24-solarized-dark-higher-contrast.h"
+#include "base24-solarized-dark-patched.h"
+#include "base24-space-gray-eighties-dull.h"
+#include "base24-space-gray-eighties.h"
+#include "base24-spacedust.h"
+#include "base24-sparky.h"
+#include "base24-spiderman.h"
+#include "base24-square.h"
+#include "base24-sundried.h"
+#include "base24-tango-adapted.h"
+#include "base24-tango-half-adapted.h"
+#include "base24-terminal-basic.h"
+#include "base24-thayer-bright.h"
+#include "base24-the-hulk.h"
+#include "base24-tokyo-night-dark.h"
+#include "base24-tokyo-night-light.h"
+#include "base24-tokyo-night-moon.h"
+#include "base24-tokyo-night-storm.h"
+#include "base24-tomorrow-night.h"
+#include "base24-toy-chest.h"
+#include "base24-treehouse.h"
+#include "base24-twilight.h"
+#include "base24-ubuntu.h"
+#include "base24-ultra-violet.h"
+#include "base24-under-the-sea.h"
+#include "base24-unikitty.h"
+#include "base24-vibrant-ink.h"
+#include "base24-violet-dark.h"
+#include "base24-violet-light.h"
+#include "base24-warm-neon.h"
+#include "base24-wez.h"
+#include "base24-wild-cherry.h"
+#include "base24-wombat.h"
+#include "base24-wryan.h"
+#include "base24-zenburn.h"
+#undef TINTED_SCHEMES_ARRAY_ENTRY
+};
+
+#endif /* TINTED_LIST_IMPLEMENTATION_ONCE */
+#endif /* TINTED_IMPLEMENTATION */
