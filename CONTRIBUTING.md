@@ -13,9 +13,13 @@
     ```
     tinted-builder-rust sync
     ```
-1. Run `tinted-builder-rust` on this repository
+1. Run `tinted-builder-rust` on this repository to generate the scheme headers
     ```sh
     tinted-builder-rust build .
+    ```
+1. Run `tinted-builder-rust` on the `list` template to generate the aggregate `include/tinted.h`
+    ```sh
+    tinted-builder-rust build ./list
     ```
 
 If you have more questions about [tinted-builder-rust], have a look at

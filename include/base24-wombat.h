@@ -29,33 +29,33 @@
  * SOFTWARE.
  */
 
-#ifndef BASE16_COLOR_H__
-#define BASE16_COLOR_H__
+#ifndef TINTED_C_COLOR_H__
+#define TINTED_C_COLOR_H__
 
 /**
  * A single color used for Base16 or Base24.
  */
-typedef struct base16_color {
+typedef struct tinted_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_color;
+} tinted_color;
 
-#endif /* BASE16_COLOR_H__ */
+#endif /* TINTED_C_COLOR_H__ */
 
-#ifndef BASE16_SCHEME_H__
-#define BASE16_SCHEME_H__
+#ifndef TINTED_C_SCHEME_H__
+#define TINTED_C_SCHEME_H__
 
 /**
- * A Base16 Scheme.
+ * A Tinted Base16 or Base24 Scheme.
  */
-typedef struct base16_scheme {
+typedef struct tinted_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the colors for the scheme. */
+    tinted_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
-} base16_scheme;
+} tinted_scheme;
 
-#endif  /* BASE16_SCHEME_H__ */
+#endif  /* TINTED_C_SCHEME_H__ */
 
 #ifndef BASE24_wombat_H__
 #define BASE24_wombat_H__
@@ -65,15 +65,15 @@ typedef struct base16_scheme {
  *
  * @author FredHappyface (https://github.com/fredHappyface)
  */
-extern const base16_scheme base24_wombat;
+extern const tinted_scheme base24_wombat;
 
 #endif  /* BASE24_wombat_H__ */
 
-#if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
+#if (defined(TINTED_IMPLEMENTATION) || defined(BASE16_IMPLEMENTATION)) && !defined(TINTED_HEADER_ONLY)
 #ifndef BASE24_wombat_IMPLEMENTATION_ONCE
 #define BASE24_wombat_IMPLEMENTATION_ONCE
 
-const base16_scheme base24_wombat = {
+const tinted_scheme base24_wombat = {
     .name = "Wombat",
     .base = {
         { .r = 23, .g = 23, .b = 23 },
@@ -107,4 +107,4 @@ const base16_scheme base24_wombat = {
 };
 
 #endif  /* BASE24_wombat_IMPLEMENTATION_ONCE */
-#endif  /* BASE16_IMPLEMENTATION */
+#endif  /* TINTED_IMPLEMENTATION */

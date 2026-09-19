@@ -7,7 +7,7 @@ C Headers for [Base16] and [Base24] color schemes, for use in [C](https://en.wik
 ``` c
 #include <stdio.h>
 
-#define BASE16_IMPLEMENTATION
+#define TINTED_IMPLEMENTATION
 #include "base24-dracula.h"
 
 int main() {
@@ -23,6 +23,19 @@ int main() {
 
     return 0;
 }
+```
+
+Every scheme provides a `tinted_scheme` structure, made up of `tinted_color`
+entries. Define `TINTED_IMPLEMENTATION` in one compilation unit before
+including the headers to compile the scheme data, or define
+`TINTED_HEADER_ONLY` to only have the declarations available.
+
+To include every Base16 and Base24 scheme at once, use the aggregate
+[`include/tinted.h`](include/tinted.h) header:
+
+``` c
+#define TINTED_IMPLEMENTATION
+#include "tinted.h"
 ```
 
 ## Contributing

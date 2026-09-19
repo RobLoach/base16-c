@@ -1,10 +1,13 @@
 #include <assert.h>
 #include <stdio.h>
 
-#define BASE16_IMPLEMENTATION
+#define TINTED_IMPLEMENTATION
+
+/* Include an individual scheme directly. */
 #include "base16-tomorrow.h"
-#include "base24-dracula.h"
-#include "base16-dracula.h"
+
+/* The aggregate header includes every generated scheme. */
+#include "tinted.h"
 
 int main() {
     printf("Name: %s\n", base16_tomorrow.name);

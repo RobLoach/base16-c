@@ -1,7 +1,7 @@
 /**
  * Base16 Apprentice 
  *
- * @author romainl
+ * @author Romain Lafourcade (https://github.com/romainl)
  *
  * Template by Rob Loach (https://robloach.net)
  * base16-c: https://github.com/RobLoach/base16-c
@@ -29,33 +29,33 @@
  * SOFTWARE.
  */
 
-#ifndef BASE16_COLOR_H__
-#define BASE16_COLOR_H__
+#ifndef TINTED_C_COLOR_H__
+#define TINTED_C_COLOR_H__
 
 /**
  * A single color used for Base16 or Base24.
  */
-typedef struct base16_color {
+typedef struct tinted_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_color;
+} tinted_color;
 
-#endif /* BASE16_COLOR_H__ */
+#endif /* TINTED_C_COLOR_H__ */
 
-#ifndef BASE16_SCHEME_H__
-#define BASE16_SCHEME_H__
+#ifndef TINTED_C_SCHEME_H__
+#define TINTED_C_SCHEME_H__
 
 /**
- * A Base16 Scheme.
+ * A Tinted Base16 or Base24 Scheme.
  */
-typedef struct base16_scheme {
+typedef struct tinted_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the colors for the scheme. */
+    tinted_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
-} base16_scheme;
+} tinted_scheme;
 
-#endif  /* BASE16_SCHEME_H__ */
+#endif  /* TINTED_C_SCHEME_H__ */
 
 #ifndef BASE16_apprentice_H__
 #define BASE16_apprentice_H__
@@ -63,48 +63,48 @@ typedef struct base16_scheme {
 /**
  * The Base16 Apprentice scheme.
  *
- * @author romainl
+ * @author Romain Lafourcade (https://github.com/romainl)
  */
-extern const base16_scheme base16_apprentice;
+extern const tinted_scheme base16_apprentice;
 
 #endif  /* BASE16_apprentice_H__ */
 
-#if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
+#if (defined(TINTED_IMPLEMENTATION) || defined(BASE16_IMPLEMENTATION)) && !defined(TINTED_HEADER_ONLY)
 #ifndef BASE16_apprentice_IMPLEMENTATION_ONCE
 #define BASE16_apprentice_IMPLEMENTATION_ONCE
 
-const base16_scheme base16_apprentice = {
+const tinted_scheme base16_apprentice = {
     .name = "Apprentice",
     .base = {
         { .r = 38, .g = 38, .b = 38 },
+        { .r = 48, .g = 48, .b = 48 },
+        { .r = 58, .g = 58, .b = 58 },
+        { .r = 68, .g = 68, .b = 68 },
+        { .r = 108, .g = 108, .b = 108 },
+        { .r = 188, .g = 188, .b = 188 },
+        { .r = 223, .g = 223, .b = 223 },
+        { .r = 255, .g = 255, .b = 255 },
         { .r = 175, .g = 95, .b = 95 },
-        { .r = 95, .g = 135, .b = 95 },
+        { .r = 255, .g = 135, .b = 0 },
         { .r = 135, .g = 135, .b = 95 },
+        { .r = 95, .g = 135, .b = 95 },
+        { .r = 95, .g = 135, .b = 135 },
         { .r = 95, .g = 135, .b = 175 },
         { .r = 95, .g = 95, .b = 135 },
-        { .r = 95, .g = 135, .b = 135 },
-        { .r = 108, .g = 108, .b = 108 },
-        { .r = 68, .g = 68, .b = 68 },
-        { .r = 255, .g = 135, .b = 0 },
-        { .r = 135, .g = 175, .b = 135 },
-        { .r = 255, .g = 255, .b = 175 },
-        { .r = 135, .g = 175, .b = 215 },
-        { .r = 135, .g = 135, .b = 175 },
-        { .r = 95, .g = 175, .b = 175 },
-        { .r = 188, .g = 188, .b = 188 },
+        { .r = 175, .g = 95, .b = 95 },
 
         /* Base24, mapped from https://github.com/tinted-theming/base24/blob/master/styling.md */
         { .r = 38, .g = 38, .b = 38 },
         { .r = 38, .g = 38, .b = 38 },
-        { .r = 68, .g = 68, .b = 68 },
-        { .r = 135, .g = 175, .b = 135 },
-        { .r = 255, .g = 255, .b = 175 },
-        { .r = 135, .g = 175, .b = 215 },
-        { .r = 135, .g = 135, .b = 175 },
-        { .r = 95, .g = 175, .b = 175 }
+        { .r = 175, .g = 95, .b = 95 },
+        { .r = 135, .g = 135, .b = 95 },
+        { .r = 95, .g = 135, .b = 95 },
+        { .r = 95, .g = 135, .b = 135 },
+        { .r = 95, .g = 135, .b = 175 },
+        { .r = 95, .g = 95, .b = 135 }
     },
     .system = 16
 };
 
 #endif  /* BASE16_apprentice_IMPLEMENTATION_ONCE */
-#endif  /* BASE16_IMPLEMENTATION */
+#endif  /* TINTED_IMPLEMENTATION */

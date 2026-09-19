@@ -1,0 +1,9 @@
+# tinted-builder-rust renders a "list" template on its own: when a config
+# entry has `options.list`, only the list is generated and every other entry
+# is skipped. The list therefore lives in its own template directory.
+# Build it with: tinted-builder-rust build ./list
+list:
+    filename: ../include/tinted.h
+    supported-systems: [base16, base24]
+    options:
+        list: true
