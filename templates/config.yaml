@@ -4,3 +4,10 @@ base16:
 base24:
     filename: include/{{ scheme-system }}-{{ scheme-slug }}.h
     supported-systems: [base24]
+
+tinted8:
+    filename: include/{{ scheme-system }}-{{ scheme-slug }}.h
+    supported-systems: [tinted8]
+    supports:
+        tinted8-builder: "0.2.0"
+        tinted8-styling: "0.2.0"

@@ -59,6 +59,39 @@ int main() {
 }
 ```
 
+## Tinted8
+
+[Tinted8] is a newer scheme system from Tinted Theming, built around eight
+terminal colors, each with `normal`, `bright` and `dim` variants (plus derived
+`orange`, `gray` and `brown` groups). Every Tinted8 scheme provides a
+`tinted8_scheme` structure with named `tinted8_color_group` fields:
+
+``` c
+#include <stdio.h>
+
+#define TINTED_IMPLEMENTATION
+#include "tinted8-gruvbox-dark.h"
+
+int main() {
+    printf("Scheme: %s\n", tinted8_gruvbox_dark.name);
+    printf("  R: %d\n", tinted8_gruvbox_dark.red.bright.r);
+    printf("  G: %d\n", tinted8_gruvbox_dark.red.bright.g);
+    printf("  B: %d\n", tinted8_gruvbox_dark.red.bright.b);
+
+    // Scheme: Gruvbox Dark
+    //   R: 251
+    //   G: 73
+    //   B: 52
+
+    return 0;
+}
+```
+
+The aggregate [`include/tinted8.h`](include/tinted8.h) header includes every
+Tinted8 scheme, along with a `tinted8_schemes` array and a `TINTED8_COUNT`
+constant, mirroring `tinted.h`. Note that only a handful of Tinted8 schemes
+exist upstream so far.
+
 ## Contributing
 
 See [`CONTRIBUTING.md`], which contains building and contribution
@@ -66,5 +99,6 @@ instructions.
 
 [base16]: https://github.com/tinted-theming/home
 [base24]: https://github.com/tinted-theming/base24/
+[tinted8]: https://github.com/tinted-theming/schemes/tree/spec-0.11/tinted8
 [xfce4-terminal]: https://docs.xfce.org/apps/terminal/start
 [`CONTRIBUTING.md`]: CONTRIBUTING.md

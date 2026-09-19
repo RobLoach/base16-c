@@ -9,6 +9,9 @@
 /* The aggregate header includes every generated scheme. */
 #include "tinted.h"
 
+/* The aggregate Tinted8 header includes every generated Tinted8 scheme. */
+#include "tinted8.h"
+
 int main() {
     int i;
 
@@ -40,6 +43,28 @@ int main() {
         assert(tinted_schemes[i]->system == 16 || tinted_schemes[i]->system == 24);
     }
     printf("Schemes: %d\n", TINTED_COUNT);
+
+    /* Tinted8 */
+    printf("Name: %s\n", tinted8_gruvbox_dark.name);
+    assert(tinted8_gruvbox_dark.black.normal.r == 40); /* #282828 */
+    assert(tinted8_gruvbox_dark.black.normal.g == 40);
+    assert(tinted8_gruvbox_dark.black.normal.b == 40);
+    assert(tinted8_gruvbox_dark.black.bright.r == 60); /* #3c3836 */
+    assert(tinted8_gruvbox_dark.black.bright.g == 56);
+    assert(tinted8_gruvbox_dark.black.bright.b == 54);
+    assert(tinted8_gruvbox_dark.red.normal.r == 204); /* #cc241d */
+    assert(tinted8_gruvbox_dark.red.normal.g == 36);
+    assert(tinted8_gruvbox_dark.red.normal.b == 29);
+
+    /* Iterate through every available Tinted8 scheme. */
+    assert(TINTED8_COUNT >= 4);
+    for (i = 0; i < TINTED8_COUNT; i++) {
+        assert(tinted8_schemes[i] != NULL);
+        assert(tinted8_schemes[i]->name != NULL);
+        assert(tinted8_schemes[i]->slug != NULL);
+        assert(tinted8_schemes[i]->variant != NULL);
+    }
+    printf("Tinted8 Schemes: %d\n", TINTED8_COUNT);
 
     return 0;
 }

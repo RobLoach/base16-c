@@ -21,6 +21,10 @@
     ```sh
     tinted-builder-rust build ./list
     ```
+1. Run `tinted-builder-rust` on the `list8` template to generate the aggregate `include/tinted8.h`
+    ```sh
+    tinted-builder-rust build ./list8
+    ```
 
 If you have more questions about [tinted-builder-rust], have a look at
 the information on the GitHub page.
