@@ -59,6 +59,23 @@ int main() {
 }
 ```
 
+### Using only specific schemes
+
+Scheme data is only compiled for the headers you actually include, so to keep
+binary size down, skip `tinted.h` and include just the schemes you want.
+`TINTED_IMPLEMENTATION` then only adds the implementation for those schemes —
+this compiles the color data for Dracula and Nord, and nothing else:
+
+``` c
+#define TINTED_IMPLEMENTATION
+#include "base24-dracula.h"
+#include "base16-nord.h"
+```
+
+In a project with multiple compilation units, define `TINTED_IMPLEMENTATION`
+before the includes in exactly one `.c` file; every other file includes the
+same headers without it and links against that one copy of the data.
+
 ## Tinted8
 
 [Tinted8] is a newer scheme system from Tinted Theming, built around eight
