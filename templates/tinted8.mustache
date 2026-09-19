@@ -1,0 +1,172 @@
+/**
+ * Tinted8 {{scheme.name}} {{scheme.description}}
+ *
+ * @author {{scheme.author}}
+ *
+ * Template by Rob Loach (https://robloach.net)
+ * base16-c: https://github.com/RobLoach/base16-c
+ *
+ * License: MIT
+ *
+ * Copyright (c) 2024 Rob Loach (https://robloach.net)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in all
+ * copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
+
+#ifndef TINTED_C_COLOR_H__
+#define TINTED_C_COLOR_H__
+
+/**
+ * A single color used for Base16 or Base24.
+ */
+typedef struct tinted_color {
+    unsigned char r; /** Red channel */
+    unsigned char g; /** Green channel */
+    unsigned char b; /** Blue channel */
+} tinted_color;
+
+#endif /* TINTED_C_COLOR_H__ */
+
+#ifndef TINTED_C_TINTED8_SCHEME_H__
+#define TINTED_C_TINTED8_SCHEME_H__
+
+/**
+ * The normal, bright and dim variants of a single Tinted8 palette color.
+ */
+typedef struct tinted8_color_group {
+    tinted_color normal; /** The normal variant of the color. */
+    tinted_color bright; /** The bright variant of the color. */
+    tinted_color dim; /** The dim variant of the color. */
+} tinted8_color_group;
+
+/**
+ * A Tinted8 Scheme.
+ *
+ * The scheme's `syntax` and `ui` mappings are intentionally omitted, as they
+ * expand to over a hundred fixed keys each; only the palette is exposed.
+ */
+typedef struct tinted8_scheme {
+    const char *name; /** The name of the scheme. */
+    const char *slug; /** The slug of the scheme. */
+    const char *author; /** The author of the scheme. */
+    const char *variant; /** Either "dark" or "light". */
+    const char *family; /** The scheme family, or an empty string. */
+    const char *style; /** The style within the family, or an empty string. */
+    tinted8_color_group black; /** The black color group. */
+    tinted8_color_group red; /** The red color group. */
+    tinted8_color_group green; /** The green color group. */
+    tinted8_color_group yellow; /** The yellow color group. */
+    tinted8_color_group blue; /** The blue color group. */
+    tinted8_color_group magenta; /** The magenta color group. */
+    tinted8_color_group cyan; /** The cyan color group. */
+    tinted8_color_group white; /** The white color group. */
+    tinted8_color_group orange; /** The orange color group. */
+    tinted8_color_group gray; /** The gray color group. */
+    tinted8_color_group brown; /** The brown color group. */
+} tinted8_scheme;
+
+#endif  /* TINTED_C_TINTED8_SCHEME_H__ */
+
+#ifndef TINTED8_{{scheme.slug-underscored}}_H__
+#define TINTED8_{{scheme.slug-underscored}}_H__
+
+/**
+ * The Tinted8 {{scheme.name}} scheme.
+ *
+ * @author {{scheme.author}}
+ */
+extern const tinted8_scheme tinted8_{{scheme.slug-underscored}};
+
+#endif  /* TINTED8_{{scheme.slug-underscored}}_H__ */
+
+#if (defined(TINTED_IMPLEMENTATION) || defined(BASE16_IMPLEMENTATION)) && !defined(TINTED_HEADER_ONLY)
+#ifndef TINTED8_{{scheme.slug-underscored}}_IMPLEMENTATION_ONCE
+#define TINTED8_{{scheme.slug-underscored}}_IMPLEMENTATION_ONCE
+
+const tinted8_scheme tinted8_{{scheme.slug-underscored}} = {
+    .name = "{{scheme.name}}",
+    .slug = "{{scheme.slug}}",
+    .author = "{{scheme.author}}",
+    .variant = "{{variant}}",
+    .family = "{{scheme.family}}",
+    .style = "{{scheme.style}}",
+    .black = {
+        .normal = { .r = {{palette.black.normal.rgb.r}}, .g = {{palette.black.normal.rgb.g}}, .b = {{palette.black.normal.rgb.b}} },
+        .bright = { .r = {{palette.black.bright.rgb.r}}, .g = {{palette.black.bright.rgb.g}}, .b = {{palette.black.bright.rgb.b}} },
+        .dim = { .r = {{palette.black.dim.rgb.r}}, .g = {{palette.black.dim.rgb.g}}, .b = {{palette.black.dim.rgb.b}} }
+    },
+    .red = {
+        .normal = { .r = {{palette.red.normal.rgb.r}}, .g = {{palette.red.normal.rgb.g}}, .b = {{palette.red.normal.rgb.b}} },
+        .bright = { .r = {{palette.red.bright.rgb.r}}, .g = {{palette.red.bright.rgb.g}}, .b = {{palette.red.bright.rgb.b}} },
+        .dim = { .r = {{palette.red.dim.rgb.r}}, .g = {{palette.red.dim.rgb.g}}, .b = {{palette.red.dim.rgb.b}} }
+    },
+    .green = {
+        .normal = { .r = {{palette.green.normal.rgb.r}}, .g = {{palette.green.normal.rgb.g}}, .b = {{palette.green.normal.rgb.b}} },
+        .bright = { .r = {{palette.green.bright.rgb.r}}, .g = {{palette.green.bright.rgb.g}}, .b = {{palette.green.bright.rgb.b}} },
+        .dim = { .r = {{palette.green.dim.rgb.r}}, .g = {{palette.green.dim.rgb.g}}, .b = {{palette.green.dim.rgb.b}} }
+    },
+    .yellow = {
+        .normal = { .r = {{palette.yellow.normal.rgb.r}}, .g = {{palette.yellow.normal.rgb.g}}, .b = {{palette.yellow.normal.rgb.b}} },
+        .bright = { .r = {{palette.yellow.bright.rgb.r}}, .g = {{palette.yellow.bright.rgb.g}}, .b = {{palette.yellow.bright.rgb.b}} },
+        .dim = { .r = {{palette.yellow.dim.rgb.r}}, .g = {{palette.yellow.dim.rgb.g}}, .b = {{palette.yellow.dim.rgb.b}} }
+    },
+    .blue = {
+        .normal = { .r = {{palette.blue.normal.rgb.r}}, .g = {{palette.blue.normal.rgb.g}}, .b = {{palette.blue.normal.rgb.b}} },
+        .bright = { .r = {{palette.blue.bright.rgb.r}}, .g = {{palette.blue.bright.rgb.g}}, .b = {{palette.blue.bright.rgb.b}} },
+        .dim = { .r = {{palette.blue.dim.rgb.r}}, .g = {{palette.blue.dim.rgb.g}}, .b = {{palette.blue.dim.rgb.b}} }
+    },
+    .magenta = {
+        .normal = { .r = {{palette.magenta.normal.rgb.r}}, .g = {{palette.magenta.normal.rgb.g}}, .b = {{palette.magenta.normal.rgb.b}} },
+        .bright = { .r = {{palette.magenta.bright.rgb.r}}, .g = {{palette.magenta.bright.rgb.g}}, .b = {{palette.magenta.bright.rgb.b}} },
+        .dim = { .r = {{palette.magenta.dim.rgb.r}}, .g = {{palette.magenta.dim.rgb.g}}, .b = {{palette.magenta.dim.rgb.b}} }
+    },
+    .cyan = {
+        .normal = { .r = {{palette.cyan.normal.rgb.r}}, .g = {{palette.cyan.normal.rgb.g}}, .b = {{palette.cyan.normal.rgb.b}} },
+        .bright = { .r = {{palette.cyan.bright.rgb.r}}, .g = {{palette.cyan.bright.rgb.g}}, .b = {{palette.cyan.bright.rgb.b}} },
+        .dim = { .r = {{palette.cyan.dim.rgb.r}}, .g = {{palette.cyan.dim.rgb.g}}, .b = {{palette.cyan.dim.rgb.b}} }
+    },
+    .white = {
+        .normal = { .r = {{palette.white.normal.rgb.r}}, .g = {{palette.white.normal.rgb.g}}, .b = {{palette.white.normal.rgb.b}} },
+        .bright = { .r = {{palette.white.bright.rgb.r}}, .g = {{palette.white.bright.rgb.g}}, .b = {{palette.white.bright.rgb.b}} },
+        .dim = { .r = {{palette.white.dim.rgb.r}}, .g = {{palette.white.dim.rgb.g}}, .b = {{palette.white.dim.rgb.b}} }
+    },
+    .orange = {
+        .normal = { .r = {{palette.orange.normal.rgb.r}}, .g = {{palette.orange.normal.rgb.g}}, .b = {{palette.orange.normal.rgb.b}} },
+        .bright = { .r = {{palette.orange.bright.rgb.r}}, .g = {{palette.orange.bright.rgb.g}}, .b = {{palette.orange.bright.rgb.b}} },
+        .dim = { .r = {{palette.orange.dim.rgb.r}}, .g = {{palette.orange.dim.rgb.g}}, .b = {{palette.orange.dim.rgb.b}} }
+    },
+    .gray = {
+        .normal = { .r = {{palette.gray.normal.rgb.r}}, .g = {{palette.gray.normal.rgb.g}}, .b = {{palette.gray.normal.rgb.b}} },
+        .bright = { .r = {{palette.gray.bright.rgb.r}}, .g = {{palette.gray.bright.rgb.g}}, .b = {{palette.gray.bright.rgb.b}} },
+        .dim = { .r = {{palette.gray.dim.rgb.r}}, .g = {{palette.gray.dim.rgb.g}}, .b = {{palette.gray.dim.rgb.b}} }
+    },
+    .brown = {
+        .normal = { .r = {{palette.brown.normal.rgb.r}}, .g = {{palette.brown.normal.rgb.g}}, .b = {{palette.brown.normal.rgb.b}} },
+        .bright = { .r = {{palette.brown.bright.rgb.r}}, .g = {{palette.brown.bright.rgb.g}}, .b = {{palette.brown.bright.rgb.b}} },
+        .dim = { .r = {{palette.brown.dim.rgb.r}}, .g = {{palette.brown.dim.rgb.g}}, .b = {{palette.brown.dim.rgb.b}} }
+    }
+};
+
+#endif  /* TINTED8_{{scheme.slug-underscored}}_IMPLEMENTATION_ONCE */
+#endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED8_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted8.h re-includes this header to build tinted8_schemes[]. */
+&tinted8_{{scheme.slug-underscored}},
+#endif  /* TINTED8_SCHEMES_ARRAY_ENTRY */

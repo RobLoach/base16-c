@@ -29,33 +29,33 @@
  * SOFTWARE.
  */
 
-#ifndef BASE16_COLOR_H__
-#define BASE16_COLOR_H__
+#ifndef TINTED_C_COLOR_H__
+#define TINTED_C_COLOR_H__
 
 /**
  * A single color used for Base16 or Base24.
  */
-typedef struct base16_color {
+typedef struct tinted_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_color;
+} tinted_color;
 
-#endif /* BASE16_COLOR_H__ */
+#endif /* TINTED_C_COLOR_H__ */
 
-#ifndef BASE16_SCHEME_H__
-#define BASE16_SCHEME_H__
+#ifndef TINTED_C_SCHEME_H__
+#define TINTED_C_SCHEME_H__
 
 /**
- * A Base16 Scheme.
+ * A Tinted Base16 or Base24 Scheme.
  */
-typedef struct base16_scheme {
+typedef struct tinted_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the colors for the scheme. */
+    tinted_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
-} base16_scheme;
+} tinted_scheme;
 
-#endif  /* BASE16_SCHEME_H__ */
+#endif  /* TINTED_C_SCHEME_H__ */
 
 #ifndef BASE24_front_end_delight_H__
 #define BASE24_front_end_delight_H__
@@ -65,15 +65,15 @@ typedef struct base16_scheme {
  *
  * @author FredHappyface (https://github.com/fredHappyface)
  */
-extern const base16_scheme base24_front_end_delight;
+extern const tinted_scheme base24_front_end_delight;
 
 #endif  /* BASE24_front_end_delight_H__ */
 
-#if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
+#if (defined(TINTED_IMPLEMENTATION) || defined(BASE16_IMPLEMENTATION)) && !defined(TINTED_HEADER_ONLY)
 #ifndef BASE24_front_end_delight_IMPLEMENTATION_ONCE
 #define BASE24_front_end_delight_IMPLEMENTATION_ONCE
 
-const base16_scheme base24_front_end_delight = {
+const tinted_scheme base24_front_end_delight = {
     .name = "Front End Delight",
     .base = {
         { .r = 27, .g = 27, .b = 29 },
@@ -83,7 +83,7 @@ const base16_scheme base24_front_end_delight = {
         { .r = 133, .g = 172, .b = 140 },
         { .r = 152, .g = 172, .b = 156 },
         { .r = 172, .g = 172, .b = 172 },
-        { .r = 139, .g = 115, .b = 90 },
+        { .r = 172, .g = 172, .b = 172 },
         { .r = 248, .g = 80, .b = 26 },
         { .r = 249, .g = 118, .b = 29 },
         { .r = 51, .g = 147, .b = 201 },
@@ -107,4 +107,9 @@ const base16_scheme base24_front_end_delight = {
 };
 
 #endif  /* BASE24_front_end_delight_IMPLEMENTATION_ONCE */
-#endif  /* BASE16_IMPLEMENTATION */
+#endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base24_front_end_delight,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */

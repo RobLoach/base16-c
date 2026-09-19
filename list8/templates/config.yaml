@@ -1,0 +1,14 @@
+# tinted-builder-rust renders a "list" template on its own: when a config
+# entry has `options.list`, only the list is generated and every other entry
+# is skipped. Additionally, tinted8 cannot be listed together with base16 or
+# base24 since their structures are different, so the tinted8 list lives in
+# its own template directory, separate from ../list.
+# Build it with: tinted-builder-rust build ./list8
+list:
+    filename: ../include/tinted8.h
+    supported-systems: [tinted8]
+    supports:
+        tinted8-builder: "0.2.0"
+        tinted8-styling: "0.2.0"
+    options:
+        list: true

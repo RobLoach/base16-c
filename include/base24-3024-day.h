@@ -29,33 +29,33 @@
  * SOFTWARE.
  */
 
-#ifndef BASE16_COLOR_H__
-#define BASE16_COLOR_H__
+#ifndef TINTED_C_COLOR_H__
+#define TINTED_C_COLOR_H__
 
 /**
  * A single color used for Base16 or Base24.
  */
-typedef struct base16_color {
+typedef struct tinted_color {
     unsigned char r; /** Red channel */
     unsigned char g; /** Green channel */
     unsigned char b; /** Blue channel */
-} base16_color;
+} tinted_color;
 
-#endif /* BASE16_COLOR_H__ */
+#endif /* TINTED_C_COLOR_H__ */
 
-#ifndef BASE16_SCHEME_H__
-#define BASE16_SCHEME_H__
+#ifndef TINTED_C_SCHEME_H__
+#define TINTED_C_SCHEME_H__
 
 /**
- * A Base16 Scheme.
+ * A Tinted Base16 or Base24 Scheme.
  */
-typedef struct base16_scheme {
+typedef struct tinted_scheme {
     const char *name; /** The name of the scheme. */
-    base16_color base[24]; /** An array of the colors for the scheme. */
+    tinted_color base[24]; /** An array of the colors for the scheme. */
     unsigned char system; /** Which system the scheme was built for, either 16 or 24. */
-} base16_scheme;
+} tinted_scheme;
 
-#endif  /* BASE16_SCHEME_H__ */
+#endif  /* TINTED_C_SCHEME_H__ */
 
 #ifndef BASE24_3024_day_H__
 #define BASE24_3024_day_H__
@@ -65,15 +65,15 @@ typedef struct base16_scheme {
  *
  * @author FredHappyface (https://github.com/fredHappyface)
  */
-extern const base16_scheme base24_3024_day;
+extern const tinted_scheme base24_3024_day;
 
 #endif  /* BASE24_3024_day_H__ */
 
-#if defined(BASE16_IMPLEMENTATION) && !defined(BASE16_HEADER_ONLY)
+#if (defined(TINTED_IMPLEMENTATION) || defined(BASE16_IMPLEMENTATION)) && !defined(TINTED_HEADER_ONLY)
 #ifndef BASE24_3024_day_IMPLEMENTATION_ONCE
 #define BASE24_3024_day_IMPLEMENTATION_ONCE
 
-const base16_scheme base24_3024_day = {
+const tinted_scheme base24_3024_day = {
     .name = "3024 Day",
     .base = {
         { .r = 247, .g = 247, .b = 247 },
@@ -83,7 +83,7 @@ const base16_scheme base24_3024_day = {
         { .r = 128, .g = 125, .b = 123 },
         { .r = 146, .g = 143, .b = 142 },
         { .r = 165, .g = 162, .b = 162 },
-        { .r = 247, .g = 247, .b = 247 },
+        { .r = 9, .g = 3, .b = 0 },
         { .r = 219, .g = 45, .b = 32 },
         { .r = 253, .g = 237, .b = 2 },
         { .r = 128, .g = 125, .b = 124 },
@@ -107,4 +107,9 @@ const base16_scheme base24_3024_day = {
 };
 
 #endif  /* BASE24_3024_day_IMPLEMENTATION_ONCE */
-#endif  /* BASE16_IMPLEMENTATION */
+#endif  /* TINTED_IMPLEMENTATION */
+
+#if defined(TINTED_SCHEMES_ARRAY_ENTRY)
+/* Entry emitted when tinted.h re-includes this header to build tinted_schemes[]. */
+&base24_3024_day,
+#endif  /* TINTED_SCHEMES_ARRAY_ENTRY */
